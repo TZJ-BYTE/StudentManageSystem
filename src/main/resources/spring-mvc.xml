@@ -15,6 +15,13 @@
     <mvc:resources mapping="/js/**" location="WEB-INF/js/"></mvc:resources>
     <mvc:resources mapping="/css/**" location="WEB-INF/css/"></mvc:resources>
     <mvc:resources mapping="/images/**" location="WEB-INF/images"></mvc:resources>
+    <!--转换器-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
     <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--前缀-->
