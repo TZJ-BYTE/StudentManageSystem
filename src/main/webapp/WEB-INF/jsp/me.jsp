@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 十一月的肖邦
-  Date: 2024/12/30
-  Time: 10:39
-  To change this template use File | Settings | File Templates.
---%>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
@@ -23,12 +16,17 @@
     <label for="username">用户名:</label>
     <input type="text" id="username" name="username" required>
     <button type="submit">查询</button>
+    <button type="button" onclick="login()">返回登录</button>
 </form>
 
 <div id="userInfo"></div>
 <div id="responseMessage"></div>
 
 <script>
+function login() {
+    location.href = "${pageContext.request.contextPath}/user/loginpage";
+}
+
     $(document).ready(function() {
         $('#userInfoForm').submit(function(event) {
             event.preventDefault(); // 阻止表单默认提交行为

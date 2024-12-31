@@ -1,19 +1,17 @@
 package com.cnlbc.controller;
 
 import com.cnlbc.pojo.User;
+import com.cnlbc.pojo.Msg;
 import com.cnlbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/user")
 public class LoginController {
 
     @Autowired
@@ -22,28 +20,63 @@ public class LoginController {
     public LoginController() {
     }
 
-    @PostMapping
-    public String doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+    @PostMapping(consumes = "application/json")
+    @RequestMapping("/login")
+    @ResponseBody
+    public Msg login(@RequestBody User user) {
+        String username = user.getUsername();
+        String password = user.getPassword();
 
-        if (username == null || username.trim().isEmpty() || password == null || password.trim().isEmpty()) {
-            // 处理无效输入
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "用户名或密码不能为空");
-            return "redirect:/login.jsp";
-        }
-
+        Msg message = new Msg();
         if (validateUser(username, password)) {
-            return "redirect:/home/findAllUser";
+            message.setMessage("登录成功");
+            message.setSuccess(true);
         } else {
-            // 登录失败处理逻辑
-            return "redirect:/login.jsp";
+            message.setMessage("登录失败");
+            message.setSuccess(false);
         }
+        return message;
+    }
+
+    @RequestMapping("/loginpage")
+    public String Loginpage(Model model){
+        //进入login页面
+        return "login";
+    }
+
+    //进入注册页面
+    @RequestMapping("/registerpage")
+    public String Register(){
+        //进入注册页面
+        return "register";
+    }
+
+    //用户注册
+    @RequestMapping("/register")
+    @ResponseBody
+    public Msg Registe() {
+        Msg message = new Msg();
+        message.setMessage("注册成功");
+        message.setSuccess(true);
+        return message;
+    }
+    //进入查看信息页面
+    @RequestMapping("/mepage")
+    public String Mepage(){
+        //进入查看信息页面
+        return "me";
+    }
+
+
+    //测试
+    @RequestMapping("/success")
+    public String success(){
+        return "success";
     }
 
     private boolean validateUser(String username, String password) {
         if (userService == null) {
-            throw new IllegalStateException("UserService is not initialized");
+            throw new IllegalStateException("UserService未初始化");
         }
         List<User> users = userService.findUserByName(username);
         if (users != null && !users.isEmpty()) {

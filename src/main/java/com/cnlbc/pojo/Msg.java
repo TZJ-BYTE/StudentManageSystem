@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Bean;
 @AllArgsConstructor
 /*等同于全参构造*/
 public class Msg {
-    public String Message;
     public Boolean success;
+    public String Message;
 }
