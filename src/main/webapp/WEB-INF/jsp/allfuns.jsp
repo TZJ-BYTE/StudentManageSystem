@@ -17,6 +17,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+
         .header {
             background-color: #333;
             color: white;
@@ -25,19 +26,23 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .header .logo {
             font-size: 24px;
         }
+
         .header .user-info {
             display: flex;
             align-items: center;
         }
+
         .header .user-info img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
         }
+
         .sidebar {
             width: 200px;
             background-color: #f4f4f4;
@@ -45,18 +50,22 @@
             position: fixed;
             overflow-y: auto;
         }
+
         .content {
             margin-left: 200px;
             padding: 20px;
         }
+
         .sidebar ul {
             list-style: none;
             padding: 0;
         }
+
         .sidebar ul li {
             padding: 10px;
             cursor: pointer;
         }
+
         .sidebar ul li:hover {
             background-color: #ddd;
         }
@@ -66,15 +75,19 @@
 
 <div class="header">
     <div class="logo">系统Logo</div>
-    <div class="title">教育管理系统</div>
+    <div class="title">学生管理系统</div>
     <div class="user-info">
-        <img src="user-avatar.png" alt="用户头像">
+        <img src="../images/1.png" alt="用户头像">
         <div>用户名</div>
-        <div style="margin-left: 10px; cursor: pointer;">通知</div>
-        <div style="margin-left: 10px; cursor: pointer;">设置</div>
-        <div style="margin-left: 10px; cursor: pointer;">退出登录</div>
+        <!-- 添加onclick事件，当点击"我的"时跳转到个人中心页面 -->
+        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('profile')">我的</div>
+        <!-- 添加onclick事件，当点击"设置"时跳转到设置页面 -->
+        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('settings')">设置</div>
+        <!-- 添加onclick事件，当点击"退出登录"时执行退出登录操作 -->
+        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('logout')">退出登录</div>
     </div>
 </div>
+
 
 <div class="sidebar">
     <ul>
@@ -91,35 +104,9 @@
     <h1>欢迎使用教育管理系统</h1>
     <p>请从左侧菜单选择一个模块。</p>
 </div>
-
 <script>
-    function navigate(module) {
-        // 这里模拟前端路由，根据点击的菜单项来更新内容区
-        var content = document.getElementById('main-content');
-        switch (module) {
-            case 'home':
-                content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';
-                break;
-            case 'teacher':
-                content.innerHTML = '<h1>教师管理</h1><p>这里是教师管理模块。</p>';
-                break;
-            case 'student':
-                content.innerHTML = '<h1>学生管理</h1><p>这里是学生管理模块。</p>';
-                break;
-            case 'class':
-                content.innerHTML = '<h1>班级管理</h1><p>这里是班级管理模块。</p>';
-                break;
-            case 'course':
-                content.innerHTML = '<h1>课程管理</h1><p>这里是课程管理模块。</p>';
-                break;
-            case 'college':
-                content.innerHTML = '<h1>学院管理</h1><p>这里是学院管理模块。</p>';
-                break;
-            default:
-                content.innerHTML = '<h1>页面未找到</h1><p>抱歉，您请求的页面不存在。</p>';
-        }
-    }
+    const contextPath = "${pageContext.request.contextPath}";
 </script>
-
+<script src="../js/allfuns.js"></script>
 </body>
 </html>
