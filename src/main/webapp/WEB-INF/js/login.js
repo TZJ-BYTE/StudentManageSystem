@@ -33,7 +33,7 @@ function login() {
             // 处理登录成功的响应
             // 如果登录成功，直接跳转到成功页面
             if (data.success) {
-                location.href = contextPath + "/user/registerpage";
+                location.href = contextPath + "/home/allfunspage";
             } else {
                 alert("登录失败，请检查用户名和密码");
             }
