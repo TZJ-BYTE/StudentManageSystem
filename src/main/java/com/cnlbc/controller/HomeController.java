@@ -30,4 +30,9 @@ public class HomeController {
             model.addAttribute("list", users);
         return "home";
     }
+    //进入主页面
+    @RequestMapping("/allfunspage")
+    public String homepage(){
+        return "allfuns";
+    }
 }

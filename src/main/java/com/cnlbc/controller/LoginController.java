@@ -26,7 +26,6 @@ public class LoginController {
     public Msg login(@RequestBody User user) {
         String username = user.getUsername();
         String password = user.getPassword();
-
         Msg message = new Msg();
         if (validateUser(username, password)) {
             message.setMessage("登录成功");
