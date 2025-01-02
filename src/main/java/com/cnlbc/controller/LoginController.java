@@ -84,4 +84,19 @@ public class LoginController {
         }
         return false;
     }
+    //进入更改密码页面
+    @RequestMapping("/me/passwordpage")
+    @ResponseBody
+    public String passwordpage() {
+        return "mepassword";
+    }
+    //更改密码
+    @RequestMapping("/me/password")
+    @ResponseBody
+    public Msg password() {
+        Msg message = new Msg();
+        message.setMessage("更改成功");
+        message.setSuccess(true);
+        return message;
+    }
 }

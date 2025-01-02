@@ -17,6 +17,7 @@
     <input type="text" id="username" name="username" required>
     <button type="submit">查询</button>
     <button type="button" onclick="login()">返回登录</button>
+    <button type="button" onclick="mepassword()">修改密码</button>
 </form>
 
 <div id="userInfo"></div>
@@ -26,7 +27,6 @@
 function login() {
     location.href = "${pageContext.request.contextPath}/user/loginpage";
 }
-
     $(document).ready(function() {
         $('#userInfoForm').submit(function(event) {
             event.preventDefault(); // 阻止表单默认提交行为
@@ -57,6 +57,9 @@ function login() {
             });
         });
     });
+    function mepassword(){
+        location.href="${pageContext.request.contextPath}"+"/user/me/passwordpage"
+    }
 </script>
 
 </body>
