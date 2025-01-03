@@ -1,0 +1,32 @@
+<!-- ClassMapper.xml -->
+<mapper namespace="com.example.mapper.ClassMapper">
+    <insert id="addClass" parameterType="Class">
+        INSERT INTO classes (classId, className, grade, teacherId)
+        VALUES (#{classId}, #{className}, #{grade}, #{teacherId})
+    </insert>
+
+    <update id="updateClass" parameterType="Class">
+        UPDATE classes
+        SET className = #{className}, grade = #{grade}, teacherId = #{teacherId}
+        WHERE classId = #{classId}
+    </update>
+
+    <delete id="deleteClass" parameterType="String">
+        DELETE FROM classes WHERE classId = #{classId}
+    </delete>
+
+    <select id="getClasses" resultType="Class">
+        SELECT * FROM classes
+        WHERE 1=1
+        <if test="grade != null">
+            AND grade = #{grade}
+        </if>
+        <if test="className != null">
+            AND className LIKE CONCAT('%', #{className}, '%')
+        </if>
+    </select>
+
+    <select id="getClassById" resultType="Class">
+        SELECT * FROM classes WHERE classId = #{classId}
+    </select>
+</mapper>
