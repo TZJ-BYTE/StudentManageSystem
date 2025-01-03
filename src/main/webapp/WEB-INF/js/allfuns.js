@@ -6,7 +6,12 @@ function navigate(module) {
             content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';
             break;
         case 'teacher':
-            content.innerHTML = '<h1>教师管理</h1><p>这里是教师管理模块。</p>';
+            fetch(contextPath + "/user/success")
+                .then(response => response.text())
+                .then(data => {
+                    content.innerHTML = data;
+                })
+                .catch(error => console.error('Error loading teacher.jsp:', error));
             break;
         case 'student':
             content.innerHTML = '<h1>学生管理</h1><p>这里是学生管理模块。</p>';

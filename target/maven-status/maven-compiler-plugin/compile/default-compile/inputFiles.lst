@@ -1,8 +1,8 @@
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\service\UserServiceImpl.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\pojo\Msg.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\controller\HomeController.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\service\UserService.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\pojo\User.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\controller\LoginController.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\repository\UserRepository.java
-E:\study\project\JAVA\StudentManageSystem\src\main\java\com\cnlbc\controller\Initialize.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/controller/Initialize.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/repository/UserRepository.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/pojo/User.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/service/UserServiceImpl.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/service/UserService.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/controller/HomeController.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/pojo/Msg.java
+/home/tzj/IdeaProjects/StudentManageSystem/src/main/java/com/cnlbc/controller/LoginController.java

@@ -1,8 +1,8 @@
-com\cnlbc\repository\UserRepository.class
-com\cnlbc\pojo\User.class
-com\cnlbc\controller\HomeController.class
-com\cnlbc\service\UserService.class
-com\cnlbc\service\UserServiceImpl.class
-com\cnlbc\controller\Initialize.class
-com\cnlbc\controller\LoginController.class
-com\cnlbc\pojo\Msg.class
+com/cnlbc/controller/LoginController.class
+com/cnlbc/service/UserServiceImpl.class
+com/cnlbc/pojo/Msg.class
+com/cnlbc/controller/HomeController.class
+com/cnlbc/controller/Initialize.class
+com/cnlbc/service/UserService.class
+com/cnlbc/pojo/User.class
+com/cnlbc/repository/UserRepository.class
