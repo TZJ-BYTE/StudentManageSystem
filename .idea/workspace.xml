@@ -9,16 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mepassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mepassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/mepassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/mepassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/LoginController.class" afterDir="false" />
-    </list>
+    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "1f27b7840dc100f3672613a1c2cbb827"
   }
 }]]></component>
@@ -166,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735869944515</updated>
       <workItem from="1735869945948" duration="561000" />
-      <workItem from="1735870524078" duration="3973000" />
+      <workItem from="1735870524078" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1735871983949</created>
@@ -182,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735871988018</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2">
+      <created>1735874683664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735874683664</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
