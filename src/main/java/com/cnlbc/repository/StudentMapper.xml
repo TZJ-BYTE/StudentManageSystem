@@ -1,5 +1,9 @@
-<mapper namespace="com.example.mapper.StudentMapper">
-    <select id="getStudentsByClassId" resultType="Student">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- StudentMapper.xml -->
+<mapper namespace="com.cnlbc.repository.StudentMapper">
+    <select id="getStudentsByClassId" resultType="com.cnlbc.pojo.Student">
         SELECT * FROM students WHERE classId = #{classId}
     </select>
 </mapper>

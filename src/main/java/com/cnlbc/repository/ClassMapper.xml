@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <!-- ClassMapper.xml -->
-<mapper namespace="com.example.mapper.ClassMapper">
-    <insert id="addClass" parameterType="Class">
+<mapper namespace="com.cnlbc.repository.ClassMapper">
+    <insert id="addClass" parameterType="com.cnlbc.pojo.Class">
         INSERT INTO classes (classId, className, grade, teacherId)
         VALUES (#{classId}, #{className}, #{grade}, #{teacherId})
     </insert>
 
-    <update id="updateClass" parameterType="Class">
+    <update id="updateClass" parameterType="com.cnlbc.pojo.Class">
         UPDATE classes
         SET className = #{className}, grade = #{grade}, teacherId = #{teacherId}
         WHERE classId = #{classId}
@@ -15,7 +18,7 @@
         DELETE FROM classes WHERE classId = #{classId}
     </delete>
 
-    <select id="getClasses" resultType="Class">
+    <select id="getClasses" resultType="com.cnlbc.pojo.Class">
         SELECT * FROM classes
         WHERE 1=1
         <if test="grade != null">
@@ -26,7 +29,7 @@
         </if>
     </select>
 
-    <select id="getClassById" resultType="Class">
+    <select id="getClassById" resultType="com.cnlbc.pojo.Class">
         SELECT * FROM classes WHERE classId = #{classId}
     </select>
 </mapper>

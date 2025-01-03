@@ -20,11 +20,11 @@ public class CourseServiceImpl implements CourseService {
         return courseMapper.getCourseById(courseId);
     }
 
-    @Override
-    public int addCourse(Course course) {
-        this.course = course;
-        return 0;
-    }
+//    @Override
+//    public int addCourse(Course course) {
+//        this.course = course;
+//        return 0;
+//    }
 
     @Override
     public int addCourse(Course course) {

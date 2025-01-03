@@ -37,4 +37,10 @@ public class HomeController {
     public String homepage(){
         return "allfuns";
     }
+
+    //进入教师管理页面
+    @RequestMapping("/teachermanage")
+    public String teachermanage(){
+        return "teacher";
+    }
 }

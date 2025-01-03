@@ -6,7 +6,7 @@ function navigate(module) {
             content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';
             break;
         case 'teacher':
-            fetch(contextPath + "/user/success")
+            fetch(contextPath + "/home/teachermanage")
                 .then(response => response.text())
                 .then(data => {
                     content.innerHTML = data;
