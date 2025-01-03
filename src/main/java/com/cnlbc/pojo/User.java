@@ -11,11 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 /*等同于全参构造*/
 public class User {
-    private int id;
+    private int usertid;
     private String username;
     private String password;
-    private String name;
-    private String sex;
-    private int age;
-
 }

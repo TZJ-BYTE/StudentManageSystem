@@ -1,0 +1,5 @@
+<mapper namespace="com.example.mapper.StudentMapper">
+    <select id="getStudentsByClassId" resultType="Student">
+        SELECT * FROM students WHERE classId = #{classId}
+    </select>
+</mapper>
