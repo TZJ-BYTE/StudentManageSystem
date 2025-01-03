@@ -4,6 +4,7 @@ import com.cnlbc.pojo.User;
 import com.cnlbc.pojo.Msg;
 import com.cnlbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -86,7 +87,6 @@ public class LoginController {
     }
     //进入更改密码页面
     @RequestMapping("/me/passwordpage")
-    @ResponseBody
     public String passwordpage() {
         return "mepassword";
     }
@@ -95,8 +95,9 @@ public class LoginController {
     @ResponseBody
     public Msg password() {
         Msg message = new Msg();
-        message.setMessage("更改成功");
+        message.setMessage("密码修改成功");
         message.setSuccess(true);
         return message;
     }
+
 }
