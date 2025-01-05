@@ -43,4 +43,5 @@ public class HomeController {
     public String teachermanage(){
         return "teacher";
     }
+
 }

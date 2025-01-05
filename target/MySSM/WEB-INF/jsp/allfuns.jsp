@@ -12,64 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教育管理系统</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header .logo {
-            font-size: 24px;
-        }
-
-        .header .user-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .header .user-info img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .sidebar {
-            width: 200px;
-            background-color: #f4f4f4;
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-        }
-
-        .content {
-            margin-left: 200px;
-            padding: 20px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .sidebar ul li:hover {
-            background-color: #ddd;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- 添加CSS文件引入 -->
+    <link rel="stylesheet" href="../css/allfuns.css"> <!-- 添加新的CSS文件引入 -->
 </head>
 <body>
 
@@ -79,15 +23,14 @@
     <div class="user-info">
         <img src="../images/1.png" alt="用户头像">
         <div>用户名</div>
-        <!-- 添加onclick事件，当点击"我的"时跳转到个人中心页面 -->
-        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('profile')">我的</div>
-        <!-- 添加onclick事件，当点击"设置"时跳转到设置页面 -->
-        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('settings')">设置</div>
-        <!-- 添加onclick事件，当点击"退出登录"时执行退出登录操作 -->
-        <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('logout')">退出登录</div>
+        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('profile')">我的</div> -->
+        <div class="user-action" onclick="navigate('profile')">我的</div>
+        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('settings')">设置</div> -->
+        <div class="user-action" onclick="navigate('settings')">设置</div>
+        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('logout')">退出登录</div> -->
+        <div class="user-action" onclick="navigate('logout')">退出登录</div>
     </div>
 </div>
-
 
 <div class="sidebar">
     <ul>

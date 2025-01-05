@@ -1,22 +1,19 @@
 package com.cnlbc.service;
 
 import com.cnlbc.pojo.Teacher;
-import com.cnlbc.repository.TeacherMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class TeacherService {
+public interface TeacherService {
+    public List<Teacher> findAllTeacher();
 
-    @Autowired
-    private TeacherMapper teacherMapper;
+    public Teacher findTeacherById(String teacherId);
 
-    public List<Teacher> getTeachers(Integer page, Integer pageSize) {
-        if (page == null || page < 1) page = 1;
-        if (pageSize == null || pageSize < 1) pageSize = 10;
-        int offset = (page - 1) * pageSize;
-        return teacherMapper.selectTeachers(offset, pageSize);
-    }
+    public void addTeacher(Teacher teacher);
+
+    public void updateTeacher(Teacher teacher);
+
+    public void deleteTeacher(String teacherId);
+
+    public int countTeachers();
 }

@@ -8,6 +8,7 @@
     <title>用户注册</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/register.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
     <script>
         // 定义上下文路径变量
         var contextPath = "${pageContext.request.contextPath}";

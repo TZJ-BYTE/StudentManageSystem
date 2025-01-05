@@ -3,30 +3,66 @@ package com.cnlbc.controller;
 import com.cnlbc.pojo.Teacher;
 import com.cnlbc.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/teacher")
 public class TeacherController {
+
+
 
     @Autowired
     private TeacherService teacherService;
 
-    @GetMapping("/teachers")
-    public Map<String, Object> getTeachers(@RequestParam(required = false) Integer page,
-                                           @RequestParam(required = false) Integer pageSize) {
+    @GetMapping("/findall")
+    public Map<String, Object> findAllTeachers(
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
+
+
+        List<Teacher> teachers = teacherService.findAllTeacher();
+
+
+        // 计算总页数
+        int totalTeachers = teacherService.countTeachers();
+        int totalPages = (int) Math.ceil((double) totalTeachers / pageSize);
+
         Map<String, Object> response = new HashMap<>();
-        List<Teacher> teachers = teacherService.getTeachers(page, pageSize);
-        response.put("code", 200);
-        response.put("message", "success");
-        response.put("data", teachers);
+        response.put("teachers", teachers);
+        response.put("currentPage", page);
+        response.put("pageSize", pageSize);
+        response.put("totalPages", totalPages);
+
         return response;
+    }
+
+
+
+    @GetMapping("/{teacherId}")
+    public Teacher findTeacherById(@PathVariable String teacherId) {
+        return teacherService.findTeacherById(teacherId);
+    }
+
+    @PostMapping("/add")
+    public String addTeacher(@RequestBody Teacher teacher) {
+        teacherService.addTeacher(teacher);
+        return "success";
+    }
+
+    @PutMapping("/edit/{teacherId}")
+    public String editTeacher(@PathVariable String teacherId, @RequestBody Teacher teacher) {
+        teacher.setTeacherId(teacherId);
+        teacherService.updateTeacher(teacher);
+        return "success";
+    }
+
+    @DeleteMapping("/delete/{teacherId}")
+    public String deleteTeacher(@PathVariable String teacherId) {
+        teacherService.deleteTeacher(teacherId);
+        return "success";
     }
 }

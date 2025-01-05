@@ -9,6 +9,7 @@
         var contextPath = "${pageContext.request.contextPath}";
     </script>
     <script src="${pageContext.request.contextPath}/js/login.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
 </head>
 <body>
 

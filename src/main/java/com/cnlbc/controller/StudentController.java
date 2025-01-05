@@ -20,13 +20,5 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/class/{classId}")
-    public ResponseEntity<Map<String, Object>> getStudentsByClassId(@PathVariable String classId) {
-        List<Student> students = studentService.getStudentsByClassId(classId);
-        Map<String, Object> response = new HashMap<>();
-        response.put("code", 200);
-        response.put("message", "success");
-        response.put("data", students);
-        return ResponseEntity.ok(response);
-    }
+
 }

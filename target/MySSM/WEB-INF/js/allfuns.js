@@ -10,6 +10,32 @@ function navigate(module) {
                 .then(response => response.text())
                 .then(data => {
                     content.innerHTML = data;
+
+                    // 重新加载所有 <script> 标签
+                    const scriptTags = content.getElementsByTagName('script');
+                    Array.from(scriptTags).forEach(script => {
+                        if (script.src) {
+                            // 如果有 src 属性，创建新的 <script> 标签并插入到 body 中
+                            const newScript = document.createElement('script');
+                            newScript.src = script.src;
+                            newScript.async = false; // 确保按顺序加载
+                            document.body.appendChild(newScript);
+                        } else {
+                            // 如果是内联脚本，直接执行
+                            eval(script.innerHTML);
+                        }
+                    });
+
+                    // 确保 jQuery 已加载后再执行 teacher.js
+                    if (typeof $ === 'undefined') {
+                        console.error("jQuery is not loaded correctly.");
+                    } else {
+                        $(document).ready(function() {
+                            console.log("Document ready, initializing...");
+                            // 初始化 teacher.js 中的功能
+                            loadTeachers(1, 10); // 或者根据实际情况初始化
+                        });
+                    }
                 })
                 .catch(error => console.error('Error loading teacher.jsp:', error));
             break;
