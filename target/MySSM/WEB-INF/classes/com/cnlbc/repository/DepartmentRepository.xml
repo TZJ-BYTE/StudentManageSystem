@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cnlbc.repository.DepartmentRepository">
+
+    <select id="findAllDepartments" resultType="Department">
+        SELECT * FROM departments
+    </select>
+
+    <select id="findDepartmentById" resultType="Department">
+        SELECT * FROM departments WHERE departmentid = #{departmentId}
+    </select>
+
+    <insert id="addDepartment" parameterType="Department">
+        INSERT INTO departments (departmentid, departmentname, address)
+        VALUES (#{departmentId}, #{departmentName}, #{address})
+    </insert>
+
+    <update id="updateDepartment" parameterType="Department">
+        UPDATE departments
+        SET departmentname = #{departmentName}, address = #{address}
+        WHERE departmentid = #{departmentId}
+    </update>
+
+    <delete id="deleteDepartment">
+        DELETE FROM departments WHERE departmentid = #{departmentId}
+    </delete>
+
+    <select id="countDepartments" resultType="int">
+        SELECT COUNT(*) FROM departments
+    </select>
+</mapper>
