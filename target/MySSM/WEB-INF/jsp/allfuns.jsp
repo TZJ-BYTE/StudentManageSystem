@@ -27,7 +27,7 @@
         </div>
         <div class="dropdown-content">
             <div class="user-action" onclick="showPopupLayer()">我的</div>
-            
+
             <div class="user-action" onclick="navigate('logout')">退出登录</div>
         </div>
     </div>

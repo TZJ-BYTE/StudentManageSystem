@@ -1,0 +1,14 @@
+[33m06d1845[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzyd[m[33m, [m[1;31morigin/zyd[m[33m)[m HEAD@{0}: reset: moving to origin/zyd
+[33m2246af3[m HEAD@{1}: reset: moving to 2246af3
+[33m20b7578[m HEAD@{2}: reset: moving to 20b7578
+[33m06d1845[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzyd[m[33m, [m[1;31morigin/zyd[m[33m)[m HEAD@{3}: reset: moving to origin/zyd
+[33m06d1845[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzyd[m[33m, [m[1;31morigin/zyd[m[33m)[m HEAD@{4}: reset: moving to origin/zyd
+[33m06d1845[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzyd[m[33m, [m[1;31morigin/zyd[m[33m)[m HEAD@{5}: reset: moving to origin/zyd
+[33m20b7578[m HEAD@{6}: reset: moving to HEAD
+[33m20b7578[m HEAD@{7}: reset: moving to HEAD
+[33m20b7578[m HEAD@{8}: reset: moving to HEAD
+[33m20b7578[m HEAD@{9}: reset: moving to HEAD
+[33m20b7578[m HEAD@{10}: commit: 2
+[33m2246af3[m HEAD@{11}: checkout: moving from master to zyd
+[33m797c8f2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{12}: commit: 本次提交的描述信息
+[33mf37f7a3[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{13}: clone: from github.com:TZJ-BYTE/StudentManageSystem.git
