@@ -7,13 +7,15 @@ import java.util.List;
 public interface TeacherService {
     public List<Teacher> findAllTeacher();
 
-    public Teacher findTeacherById(String teacherId);
+    public Teacher findTeacherById(Integer teacherId);
 
     public void addTeacher(Teacher teacher);
 
     public void updateTeacher(Teacher teacher);
 
-    public void deleteTeacher(String teacherId);
+    public Integer deleteTeacher(Integer teacherId);
 
     public int countTeachers();
+
+    public Integer getMaxTeacherId();
 }

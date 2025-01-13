@@ -19,7 +19,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher findTeacherById(String teacherId) {
+    public Teacher findTeacherById(Integer teacherId) {
         return teacherRepository.findTeacherById(teacherId);
     }
 
@@ -34,12 +34,18 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public void deleteTeacher(String teacherId) {
+    public Integer deleteTeacher(Integer teacherId) {
         teacherRepository.deleteTeacher(teacherId);
+        return teacherId;
     }
 
     @Override
     public int countTeachers() {
         return teacherRepository.countTeachers();
+    }
+
+    @Override
+    public Integer getMaxTeacherId() {
+        return teacherRepository.getMaxTeacherId();
     }
 }

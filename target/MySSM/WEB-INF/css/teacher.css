@@ -48,7 +48,7 @@ th:last-child, td:last-child {
 }
 
 /* 添加按钮样式 */
-.action-links a.add-button {
+.action-links button.add-button {
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -57,20 +57,21 @@ th:last-child, td:last-child {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
-.action-links a.add-button:hover {
+.action-links button.add-button:hover {
     background-color: #218838;
 }
 
-.action-links a.add-button:active {
+.action-links button.add-button:active {
     background-color: #1e7e34;
 }
 
 /* 按钮样式 */
-.action-links a.btn-edit,
-.action-links a.btn-delete,
-.action-links a.btn-detail {
+.action-links button.btn-edit,
+.action-links button.btn-delete,
+.action-links button.btn-detail {
     background-color: #4CAF50;
     color: white;
     padding: 8px 12px; /* 修改: 减小按钮的内边距 */
@@ -80,14 +81,13 @@ th:last-child, td:last-child {
     margin-right: 4px; /* 修改: 减小按钮之间的间距 */
 }
 
-.action-links a.btn-delete {
+.action-links button.btn-delete {
     background-color: #f44336;
 }
 
-.action-links a.btn-detail {
+.action-links button.btn-detail {
     background-color: #007bff;
 }
-
 
 /* 搜索输入框样式 */
 .action-links {
@@ -125,4 +125,92 @@ th:last-child, td:last-child {
 
 .search-button:active {
     background-color: #004494;
+}
+
+
+/* 弹出框样式 */
+#addTeacherModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#addTeacherModal.show {
+    display: flex;
+}
+
+#addTeacherModal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+#addTeacherModal .modal-content h2 {
+    margin-bottom: 20px;
+}
+
+#addTeacherModal .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#addTeacherModal .modal-content input,
+#addTeacherModal .modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addTeacherModal .modal-content button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#addTeacherModal .modal-content button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#addTeacherModal .modal-content button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addTeacherModal .modal-content button[type="button"]:hover {
+    background-color: #bbb;
+}
+
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
 }

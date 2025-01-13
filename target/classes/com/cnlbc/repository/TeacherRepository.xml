@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="com.cnlbc.repository.TeacherRepository">
 
     <select id="findAllTeacher" resultType="Teacher">
@@ -8,25 +7,30 @@
     </select>
 
     <select id="findTeacherById" resultType="Teacher">
-        SELECT * FROM teachers WHERE teacher_id = #{teacherId}
+        SELECT * FROM teachers WHERE teacherid = #{teacherId}
     </select>
 
     <insert id="addTeacher" parameterType="Teacher">
-        INSERT INTO teachers (teacher_id, name, gender, title, fieldofstudy, contact_number, departmentid)
-        VALUES (#{teacherId}, #{name}, #{gender}, #{title}, #{fieldofStudy}, #{contactNumber}, #{departmentid})
+        INSERT INTO teachers (teacherid, name, gender, title, fieldofstudy, contactnumber, departmentid)
+        VALUES (#{teacherId}, #{name}, #{gender}, #{title}, #{fieldOfStudy}, #{contactNumber}, #{departmentId})
     </insert>
 
     <update id="updateTeacher" parameterType="Teacher">
         UPDATE teachers
-        SET name = #{name}, gender = #{gender}, title = #{title}, fieldofstudy = #{fieldofStudy}, contact_number = #{contactNumber}, departmentid = #{departmentid}
-        WHERE teacher_id = #{teacherId}
+        SET name = #{name}, gender = #{gender}, title = #{title}, fieldofstudy = #{fieldOfStudy}, contactnumber = #{contactNumber}, departmentid = #{departmentId}
+        WHERE teacherid = #{teacherId}
     </update>
 
     <delete id="deleteTeacher">
-        DELETE FROM teachers WHERE teacher_id = #{teacherId}
+        DELETE FROM teachers WHERE teacherid = #{teacherId}
     </delete>
 
     <select id="countTeachers" resultType="int">
         SELECT COUNT(*) FROM teachers
     </select>
+
+    <select id="getMaxTeacherId" resultType="int">
+        SELECT MAX(teacherid) FROM teachers
+    </select>
+
 </mapper>

@@ -1,6 +1,6 @@
-
 function navigate(module) {
     var content = document.getElementById('main-content');
+
     switch (module) {
         case 'home':
             content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';
@@ -70,4 +70,15 @@ function navigate(module) {
         default:
             content.innerHTML = '<h1>页面未找到</h1><p>抱歉，您请求的页面不存在。</p>';
     }
+}
+// 显示弹出框的函数
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+// 关闭弹出框的函数
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
 }

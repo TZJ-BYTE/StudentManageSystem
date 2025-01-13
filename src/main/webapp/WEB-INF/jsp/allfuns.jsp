@@ -12,24 +12,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教育管理系统</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- 添加CSS文件引入 -->
-    <link rel="stylesheet" href="../css/allfuns.css"> <!-- 添加新的CSS文件引入 -->
+    <link rel="stylesheet" href="../css/allfuns.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
 <div class="header">
     <div class="logo">系统Logo</div>
     <div class="title">学生管理系统</div>
-    <div class="user-info">
-        <img src="../images/1.png" alt="用户头像">
-        <div>用户名</div>
-        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('profile')">我的</div> -->
-        <div class="user-action" onclick="navigate('profile')">我的</div>
-        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('settings')">设置</div> -->
-        <div class="user-action" onclick="navigate('settings')">设置</div>
-        <!-- 删除: <div style="margin-left: 10px; cursor: pointer;" onclick="navigate('logout')">退出登录</div> -->
-        <div class="user-action" onclick="navigate('logout')">退出登录</div>
-    </div>
+<div class="user-info">
+    <img src="../images/1.png" alt="用户头像">
+    <div>用户名</div>
+    <div class="user-action" onclick="navigate('profile')" style="margin-left: 10px;">我的</div>
+    <div class="user-action" onclick="navigate('settings')" style="margin-left: 10px;">设置</div>
+    <div class="user-action" onclick="navigate('logout')" style="margin-left: 10px;">退出登录</div>
+</div>
+
 </div>
 
 <div class="sidebar">
@@ -50,6 +48,8 @@
 <script>
     const contextPath = "${pageContext.request.contextPath}";
 </script>
+<script src="../js/teacher.js"></script>
 <script src="../js/allfuns.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
-
 function navigate(module) {
     var content = document.getElementById('main-content');
+
     switch (module) {
         case 'home':
             content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';

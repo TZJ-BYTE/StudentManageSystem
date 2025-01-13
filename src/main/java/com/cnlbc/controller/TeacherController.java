@@ -44,7 +44,7 @@ public class TeacherController {
 
     @GetMapping("/{teacherId}")
     public Teacher findTeacherById(@PathVariable String teacherId) {
-        return teacherService.findTeacherById(teacherId);
+        return teacherService.findTeacherById(Integer.valueOf(teacherId));
     }
 
     @PostMapping("/add")
@@ -52,17 +52,20 @@ public class TeacherController {
         teacherService.addTeacher(teacher);
         return "success";
     }
-
+    @GetMapping("/getMaxTeacherId")
+    public Integer getMaxTeacherId() {
+        return teacherService.getMaxTeacherId();
+    }
     @PutMapping("/edit/{teacherId}")
     public String editTeacher(@PathVariable String teacherId, @RequestBody Teacher teacher) {
-        teacher.setTeacherId(teacherId);
+        teacher.setTeacherId(Integer.valueOf(teacherId));
         teacherService.updateTeacher(teacher);
         return "success";
     }
 
     @DeleteMapping("/delete/{teacherId}")
     public String deleteTeacher(@PathVariable String teacherId) {
-        teacherService.deleteTeacher(teacherId);
+        teacherService.deleteTeacher(Integer.valueOf(teacherId));
         return "success";
     }
 }
