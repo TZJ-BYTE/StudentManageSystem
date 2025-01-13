@@ -40,7 +40,7 @@
 4. 启动Tomcat服务器，访问系统。
 
 ## 使用示例
-1. 打开浏览器，访问系统URL（http://localhost:8080/student-management-system）。
+1. 打开浏览器，访问系统URL（http://localhost:8080/StudentManageSystem_war）。
 2. 登录系统，进入教师管理页面。
 3. 点击“添加教师”按钮，填写教师信息并提交。
 4. 使用搜索功能，根据教师姓名或ID搜索教师信息。
