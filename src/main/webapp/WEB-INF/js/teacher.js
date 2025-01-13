@@ -60,7 +60,7 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error("加载教师数据失败:", xhr.responseText);
-                alert("加载教师数据失败: " + error);
+                toastr.error('加载教师数据失败: ' + error);
             }
         });
     });

@@ -9,57 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/pojo/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/DepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/DepartmentRepository.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_12_30_4_02__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_12_30_下午4_02_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_30_4_06__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_30_下午4_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_3_9_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_3_下午9_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/MySSM.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/pojo/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/TeacherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/TeacherRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/TeacherRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/TeacherRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/teacher.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/teacher.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/teacher.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/teacher.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/allfuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/allfuns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/allfuns.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/allfuns.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherServiceImpl.class" afterDir="false" />
+    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="教师模块优化">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teacher.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +42,13 @@
     &quot;assignee&quot;: &quot;TZJ-BYTE&quot;
   }
 }</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="mytest" />
+      </list>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:TZJ-BYTE/StudentManageSystem.git&quot;,
@@ -263,7 +222,7 @@
       <workItem from="1736260664186" duration="27000" />
       <workItem from="1736398394991" duration="1062000" />
       <workItem from="1736478850059" duration="4569000" />
-      <workItem from="1736673860148" duration="35103000" />
+      <workItem from="1736673860148" duration="35507000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1735871983949</created>
@@ -295,7 +254,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736086855969</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.0">
+      <option name="closed" value="true" />
+      <created>1736768181174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736768181175</updated>
+    </task>
+    <task id="LOCAL-00006" summary="教师模块优化">
+      <option name="closed" value="true" />
+      <created>1736768201590</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736768201590</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +291,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2" />
     <MESSAGE value="1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
+    <MESSAGE value="教师模块优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="教师模块优化" />
   </component>
 </project>
