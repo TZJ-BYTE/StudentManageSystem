@@ -22,26 +22,17 @@ public class TeacherController {
     public Map<String, Object> findAllTeachers(
             @RequestParam(value = "page", defaultValue = "1") int page,
             @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
-
-
         List<Teacher> teachers = teacherService.findAllTeacher();
-
-
         // 计算总页数
         int totalTeachers = teacherService.countTeachers();
         int totalPages = (int) Math.ceil((double) totalTeachers / pageSize);
-
         Map<String, Object> response = new HashMap<>();
         response.put("teachers", teachers);
         response.put("currentPage", page);
         response.put("pageSize", pageSize);
         response.put("totalPages", totalPages);
-
         return response;
     }
-
-
-
     @GetMapping("/{teacherId}")
     public Teacher findTeacherById(@PathVariable String teacherId) {
         return teacherService.findTeacherById(teacherId);

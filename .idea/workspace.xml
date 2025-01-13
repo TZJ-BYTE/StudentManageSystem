@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="StudentManageSystem:war" />
+      <artifact name="MySSM:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,49 +10,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="2">
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/ClassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/CourseController$ResponseMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/CourseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Class.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/ClassMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/ClassMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/ClassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/teacher.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/ClassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/CourseController$ResponseMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/CourseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Class.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/ClassMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/ClassMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/CourseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/StudentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/ClassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/CourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/CourseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/StudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/pen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_12_30_4_02__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_12_30_下午4_02_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_30_4_06__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2024_12_30_下午4_06_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_3_9_42__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_3_下午9_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/MySSM.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/allfuns.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/allfuns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/me.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mepassword.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MySSM.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/allfuns.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/allfuns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/allfuns.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/allfuns.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/me.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,40 +125,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Maven.MySSM [clean].executor": "Run",
-    "Maven.MySSM [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat .executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "tzj",
-    "kotlin-language-version-configured": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
-    "spring.configuration.checksum": "1f27b7840dc100f3672613a1c2cbb827",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.MySSM [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MySSM [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat .executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tzj&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1f27b7840dc100f3672613a1c2cbb827&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/css" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat " type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.98" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="StudentManageSystem:war">
+        <artifact name="MySSM:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/StudentManageSystem_war" />
+            <option name="CONTEXT_PATH" value="/MySSM_war" />
           </settings>
         </artifact>
       </deployment>
@@ -219,10 +234,8 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="MySSM:war" />
-          <artifact name="StudentManageSystem:war" />
         </option>
       </method>
     </configuration>
@@ -245,6 +258,12 @@
       <updated>1735869944515</updated>
       <workItem from="1735869945948" duration="561000" />
       <workItem from="1735870524078" duration="4284000" />
+      <workItem from="1736574882198" duration="13438000" />
+      <workItem from="1736658738378" duration="1144000" />
+      <workItem from="1736659934609" duration="347000" />
+      <workItem from="1736660295108" duration="7697000" />
+      <workItem from="1736685475195" duration="3278000" />
+      <workItem from="1736760700069" duration="5697000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1735871983949</created>
