@@ -1,0 +1,2220 @@
+Index: target/maven-archiver/pom.properties
+===================================================================
+diff --git a/target/maven-archiver/pom.properties b/target/maven-archiver/pom.properties
+deleted file mode 100644
+--- a/target/maven-archiver/pom.properties	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,3 +0,0 @@
+-artifactId=MySSM
+-groupId=org.example
+-version=1.0-SNAPSHOT
+Index: target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.xml b/target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.xml
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,31 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8" ?>
+-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+-<mapper namespace="com.cnlbc.repository.DepartmentRepository">
+-
+-    <select id="findAllDepartments" resultType="Department">
+-        SELECT * FROM departments
+-    </select>
+-
+-    <select id="findDepartmentById" resultType="Department">
+-        SELECT * FROM departments WHERE departmentid = #{departmentId}
+-    </select>
+-
+-    <insert id="addDepartment" parameterType="Department">
+-        INSERT INTO departments (departmentid, departmentname, address)
+-        VALUES (#{departmentId}, #{departmentName}, #{address})
+-    </insert>
+-
+-    <update id="updateDepartment" parameterType="Department">
+-        UPDATE departments
+-        SET departmentname = #{departmentName}, address = #{address}
+-        WHERE departmentid = #{departmentId}
+-    </update>
+-
+-    <delete id="deleteDepartment">
+-        DELETE FROM departments WHERE departmentid = #{departmentId}
+-    </delete>
+-
+-    <select id="countDepartments" resultType="int">
+-        SELECT COUNT(*) FROM departments
+-    </select>
+-</mapper>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/jsp/allfuns.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/allfuns.jsp b/target/MySSM/WEB-INF/jsp/allfuns.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/allfuns.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,55 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: 十一月的肖邦
+-  Date: 2025/1/2
+-  Time: 15:46
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<!DOCTYPE html>
+-<html lang="zh">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>教育管理系统</title>
+-    <link rel="stylesheet" href="../css/allfuns.css">
+-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+-</head>
+-<body>
+-
+-<div class="header">
+-    <div class="logo">系统Logo</div>
+-    <div class="title">学生管理系统</div>
+-<div class="user-info">
+-    <img src="../images/1.png" alt="用户头像">
+-    <div>用户名</div>
+-    <div class="user-action" onclick="navigate('profile')" style="margin-left: 10px;">我的</div>
+-    <div class="user-action" onclick="navigate('settings')" style="margin-left: 10px;">设置</div>
+-    <div class="user-action" onclick="navigate('logout')" style="margin-left: 10px;">退出登录</div>
+-</div>
+-
+-</div>
+-
+-<div class="sidebar">
+-    <ul>
+-        <li onclick="navigate('home')">首页</li>
+-        <li onclick="navigate('teacher')">教师管理</li>
+-        <li onclick="navigate('student')">学生管理</li>
+-        <li onclick="navigate('class')">班级管理</li>
+-        <li onclick="navigate('course')">课程管理</li>
+-        <li onclick="navigate('college')">学院管理</li>
+-    </ul>
+-</div>
+-
+-<div class="content" id="main-content">
+-    <h1>欢迎使用教育管理系统</h1>
+-    <p>请从左侧菜单选择一个模块。</p>
+-</div>
+-<script>
+-    const contextPath = "${pageContext.request.contextPath}";
+-</script>
+-<script src="../js/teacher.js"></script>
+-<script src="../js/allfuns.js"></script>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: target/classes/com/cnlbc/repository/DepartmentRepository.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/com/cnlbc/repository/DepartmentRepository.xml b/target/classes/com/cnlbc/repository/DepartmentRepository.xml
+deleted file mode 100644
+--- a/target/classes/com/cnlbc/repository/DepartmentRepository.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,31 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8" ?>
+-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+-<mapper namespace="com.cnlbc.repository.DepartmentRepository">
+-
+-    <select id="findAllDepartments" resultType="Department">
+-        SELECT * FROM departments
+-    </select>
+-
+-    <select id="findDepartmentById" resultType="Department">
+-        SELECT * FROM departments WHERE departmentid = #{departmentId}
+-    </select>
+-
+-    <insert id="addDepartment" parameterType="Department">
+-        INSERT INTO departments (departmentid, departmentname, address)
+-        VALUES (#{departmentId}, #{departmentName}, #{address})
+-    </insert>
+-
+-    <update id="updateDepartment" parameterType="Department">
+-        UPDATE departments
+-        SET departmentname = #{departmentName}, address = #{address}
+-        WHERE departmentid = #{departmentId}
+-    </update>
+-
+-    <delete id="deleteDepartment">
+-        DELETE FROM departments WHERE departmentid = #{departmentId}
+-    </delete>
+-
+-    <select id="countDepartments" resultType="int">
+-        SELECT COUNT(*) FROM departments
+-    </select>
+-</mapper>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_36__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_36__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_36__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_36__Changes_.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,259 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]" date="1736832994095" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2025/1/14 下午1:36 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Course.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Course.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/CourseService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Class.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Class.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/ClassService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/TeacherRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/TeacherServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/service/UserService.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/UserService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/HomeController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM.war" />
+-    <option name="AFTER_PATH" value="target/MySSM.war" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/MySSM.war" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/StudentRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Student.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Student.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/StudentController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/HomeController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/TeacherService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/LoginController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/ClassRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/ClassController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/ClassController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/CourseRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="src/main/webapp/WEB-INF/images/pen.png" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/pen.png" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Student.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Student1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/StudentServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/StudentService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/CourseServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Course.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Course1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Teacher.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Class.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Class1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/CourseController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/ClassService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/CourseController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/ClassRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/StudentController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Teacher.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Teacher1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/LoginController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/TeacherController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/images/pen.png" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/pen1.png" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/js/register.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/js/register.js b/target/MySSM/WEB-INF/js/register.js
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/js/register.js	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,57 +0,0 @@
+-// register.js
+-$(document).ready(function() {
+-    $('#registrationForm').submit(function(event) {
+-        event.preventDefault(); // 阻止表单默认提交行为
+-
+-        const username = $('#username').val();
+-        const password = $('#password').val();
+-
+-        // 获取当前最大 usertid
+-        $.ajax({
+-            url: contextPath + "/user/getMaxUsertId",
+-            type: 'GET',
+-            success: function(maxUsertId) {
+-                    const usertid = maxUsertId + 1; // 设置新的 usertid
+-
+-                    // 准备要发送的数据
+-                    const data = {
+-                        "usertid": usertid,
+-                        "username": username,
+-                        "password": password
+-                    };
+-
+-                    // 发起AJAX POST请求
+-                    $.ajax({
+-                        url: contextPath + "/user/register",
+-                        type: 'POST',
+-                        contentType: 'application/json', // 设置请求头内容类型为JSON
+-                        data: JSON.stringify(data), // 将JavaScript对象转换为JSON字符串
+-                        success: function(response) {
+-                            // 请求成功时的处理
+-                            if (response.success) {
+-                                let countdown = 3;
+-                                const intervalId = setInterval(function() {
+-                                    $('#responseMessage').text(`用户注册成功。将在${countdown}秒后跳转到登录页面`).css('color', 'green');
+-                                    countdown--;
+-                                    if (countdown < 0) {
+-                                        clearInterval(intervalId);
+-                                        location.href = contextPath + "/user/loginpage";
+-                                    }
+-                                }, 1000);
+-                            } else {
+-                                $('#responseMessage').text(response.message).css('color', 'red');
+-                            }
+-                        },
+-                        error: function(xhr, status, error) {
+-                            // 请求失败时的处理
+-                            $('#responseMessage').text('注册失败: ' + xhr.responseText).css('color', 'red');
+-                        }
+-                    });
+-            },
+-            error: function(xhr, status, error) {
+-                // 请求失败时的处理
+-                $('#responseMessage').text('获取最大 usertid 失败: ' + xhr.responseText).css('color', 'red');
+-            }
+-        });
+-    });
+-});
+Index: target/MySSM/WEB-INF/js/login.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/js/login.js b/target/MySSM/WEB-INF/js/login.js
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/js/login.js	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,46 +0,0 @@
+-// login.js
+-// 跳转到注册页面
+-function login() {
+-    const username = document.getElementById('username').value;
+-    const password = document.getElementById('password').value;
+-    // 确保用户名和密码不为空
+-    if (username === '' || password === '') {
+-        alert('请输入用户名和密码');
+-        return;
+-    }
+-    // 构造要发送的JSON对象
+-    const userData = {
+-        username: username,
+-        password: password
+-    };
+-    console.log("发送数据", userData);
+-    // 使用fetch发送POST请求
+-    fetch(contextPath + '/user/login', {
+-        method: 'POST',
+-        headers: {
+-            'Content-Type': 'application/json'
+-        },
+-        body: JSON.stringify(userData)
+-    })
+-        .then(response => {
+-            if (!response.ok) {
+-                throw new Error('请求失败');
+-            }
+-            return response.json();
+-        })
+-        .then(data => {
+-            console.log("接收数据", data);
+-            // 处理登录成功的响应
+-            // 如果登录成功，直接跳转到成功页面
+-            if (data.success) {
+-                location.href = contextPath + "/home/allfunspage";
+-            } else {
+-                alert("登录失败，请检查用户名和密码");
+-            }
+-        })
+-        .catch(error => {
+-            // 处理请求错误
+-            console.error('错误:', error);
+-            alert('请求发生错误，请重试');
+-        });
+-}
+Index: target/MySSM/WEB-INF/jsp/register.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/register.jsp b/target/MySSM/WEB-INF/jsp/register.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/register.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,45 +0,0 @@
+-<!DOCTYPE html>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<%@ page isELIgnored="false" %>
+-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>用户注册</title>
+-    <!-- 引入 jQuery -->
+-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+-    <!-- 引入 toastr CSS -->
+-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+-    <!-- 引入 toastr JS -->
+-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+-    <script src="${pageContext.request.contextPath}/js/register.js"></script>
+-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
+-    <script>
+-        // 定义上下文路径变量
+-        var contextPath = "${pageContext.request.contextPath}";
+-    </script>
+-</head>
+-<body>
+-
+-<div class="form-container">
+-    <div class="form-header">
+-        <h2>用户注册</h2>
+-        <span>已经在系统中？<a href="${pageContext.request.contextPath}/user/loginpage">登录</a></span>
+-    </div>
+-
+-    <form id="registrationForm">
+-        <label for="username">用户名:</label>
+-        <input type="text" id="username" name="username" required>
+-        <br><br>
+-        <label for="password">密码:</label>
+-        <input type="password" id="password" name="password" required>
+-        <br><br>
+-        <button type="submit">注册</button>
+-    </form>
+-
+-    <div id="responseMessage"></div>
+-</div>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/web.xml b/target/MySSM/WEB-INF/web.xml
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/web.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,43 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+-         version="4.0">
+-  <display-name>Archetype Created Web Application</display-name>
+-
+-
+-  <!--启动Spring-->
+-  <context-param>
+-    <param-name>contextConfigLocation</param-name>
+-    <param-value>classpath:spring-mybatis.xml</param-value>
+-  </context-param>
+-  <listener>
+-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+-  </listener>
+-  <!--Spring MVC-->
+-  <servlet>
+-    <servlet-name>dispatcherServlet</servlet-name>
+-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+-    <init-param>
+-      <param-name>contextConfigLocation</param-name>
+-      <param-value>classpath:spring-mvc.xml</param-value>
+-    </init-param>
+-  </servlet>
+-  <servlet-mapping>
+-    <servlet-name>dispatcherServlet</servlet-name>
+-    <url-pattern>/</url-pattern>
+-  </servlet-mapping>
+-  <!--字符编码过滤-->
+-  <filter>
+-    <filter-name>characterEncodingFilter</filter-name>
+-    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+-    <init-param>
+-      <param-name>encoding</param-name>
+-      <param-value>UTF-8</param-value>
+-    </init-param>
+-  </filter>
+-  <filter-mapping>
+-    <filter-name>characterEncodingFilter</filter-name>
+-    <url-pattern>/*</url-pattern>
+-  </filter-mapping>
+-</web-app>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/css/teacher.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/css/teacher.css b/target/MySSM/WEB-INF/css/teacher.css
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/css/teacher.css	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,216 +0,0 @@
+-/* teacher.css */
+-
+-/* 基本样式 */
+-body {
+-    font-family: Arial, sans-serif;
+-    background-color: #f4f4f9;
+-    margin: 0;
+-    padding: 0;
+-}
+-
+-h1 {
+-    color: #333;
+-    text-align: center;
+-    margin: 20px 0;
+-}
+-
+-/* 表格样式 */
+-table {
+-    width: 100%;
+-    border-collapse: collapse;
+-    margin: 20px 0;
+-    background-color: #fff;
+-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+-}
+-
+-th, td {
+-    border: 1px solid #ddd;
+-    padding: 12px;
+-    text-align: left;
+-}
+-
+-th {
+-    background-color: #f2f2f2;
+-    color: #333;
+-}
+-
+-tr:nth-child(even) {
+-    background-color: #f9f9f9;
+-}
+-
+-tr:hover {
+-    background-color: #f1f1f1;
+-}
+-
+-/* 操作列宽度设置 */
+-th:last-child, td:last-child {
+-    width: 250px;
+-}
+-
+-/* 添加按钮样式 */
+-.action-links button.add-button {
+-    background-color: #28a745;
+-    color: #fff;
+-    border: none;
+-    padding: 10px 20px;
+-    border-radius: 5px;
+-    text-decoration: none;
+-    font-weight: bold;
+-    transition: background-color 0.3s;
+-    cursor: pointer;
+-}
+-
+-.action-links button.add-button:hover {
+-    background-color: #218838;
+-}
+-
+-.action-links button.add-button:active {
+-    background-color: #1e7e34;
+-}
+-
+-/* 按钮样式 */
+-.action-links button.btn-edit,
+-.action-links button.btn-delete,
+-.action-links button.btn-detail {
+-    background-color: #4CAF50;
+-    color: white;
+-    padding: 8px 12px; /* 修改: 减小按钮的内边距 */
+-    border: none;
+-    border-radius: 4px; /* 修改: 减小按钮的圆角 */
+-    cursor: pointer;
+-    margin-right: 4px; /* 修改: 减小按钮之间的间距 */
+-}
+-
+-.action-links button.btn-delete {
+-    background-color: #f44336;
+-}
+-
+-.action-links button.btn-detail {
+-    background-color: #007bff;
+-}
+-
+-/* 搜索输入框样式 */
+-.action-links {
+-    display: flex;
+-    justify-content: space-between; /* 修改: 使用 space-between 使添加按钮和搜索表单分别位于两端 */
+-    align-items: center;
+-    margin-bottom: 20px;
+-}
+-
+-.search-container {
+-    display: flex;
+-    align-items: center;
+-}
+-
+-.search-input {
+-    padding: 8px;
+-    margin-right: 8px;
+-    border: 1px solid #ccc;
+-    border-radius: 4px;
+-    width: 200px; /* 根据需要调整宽度 */
+-}
+-
+-.search-button {
+-    background-color: #007bff;
+-    color: white;
+-    border: none;
+-    padding: 8px 16px;
+-    border-radius: 4px;
+-    cursor: pointer;
+-}
+-
+-.search-button:hover {
+-    background-color: #0056b3;
+-}
+-
+-.search-button:active {
+-    background-color: #004494;
+-}
+-
+-
+-/* 弹出框样式 */
+-#addTeacherModal {
+-    display: none;
+-    position: fixed;
+-    top: 0;
+-    left: 0;
+-    width: 100%;
+-    height: 100%;
+-    background-color: rgba(0, 0, 0, 0.5);
+-    justify-content: center;
+-    align-items: center;
+-    z-index: 1000;
+-    animation: fadeIn 0.3s ease-in-out;
+-}
+-
+-#addTeacherModal.show {
+-    display: flex;
+-}
+-
+-#addTeacherModal .modal-content {
+-    background-color: #fff;
+-    padding: 20px;
+-    border-radius: 8px;
+-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+-    width: 400px;
+-    max-width: 90%;
+-    animation: slideIn 0.3s ease-in-out;
+-}
+-
+-#addTeacherModal .modal-content h2 {
+-    margin-bottom: 20px;
+-}
+-
+-#addTeacherModal .modal-content label {
+-    display: block;
+-    margin-bottom: 5px;
+-    font-weight: bold;
+-}
+-
+-#addTeacherModal .modal-content input,
+-#addTeacherModal .modal-content select {
+-    width: 100%;
+-    padding: 8px;
+-    margin-bottom: 10px;
+-    border: 1px solid #ccc;
+-    border-radius: 4px;
+-}
+-
+-#addTeacherModal .modal-content button[type="submit"] {
+-    background-color: #28a745;
+-    color: #fff;
+-    border: none;
+-    padding: 10px 20px;
+-    border-radius: 5px;
+-    cursor: pointer;
+-    margin-right: 10px;
+-}
+-
+-#addTeacherModal .modal-content button[type="submit"]:hover {
+-    background-color: #218838;
+-}
+-
+-#addTeacherModal .modal-content button[type="button"] {
+-    background-color: #ccc;
+-    color: #333;
+-    border: none;
+-    padding: 10px 20px;
+-    border-radius: 5px;
+-    cursor: pointer;
+-}
+-
+-#addTeacherModal .modal-content button[type="button"]:hover {
+-    background-color: #bbb;
+-}
+-
+-
+-/* 动画效果 */
+-@keyframes fadeIn {
+-    from { opacity: 0; }
+-    to { opacity: 1; }
+-}
+-
+-@keyframes slideIn {
+-    from { transform: translateY(-20px); }
+-    to { transform: translateY(0); }
+-}
+Index: target/MySSM/WEB-INF/jsp/login.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/login.jsp b/target/MySSM/WEB-INF/jsp/login.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/login.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,36 +0,0 @@
+-<!DOCTYPE html>
+-<%@ page contentType="text/html; charset=UTF-8"%>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>用户登录</title>
+-    <script>
+-        var contextPath = "${pageContext.request.contextPath}";
+-    </script>
+-    <script src="${pageContext.request.contextPath}/js/login.js"></script>
+-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
+-</head>
+-<body>
+-
+-<div class="form-container">
+-    <div class="form-header">
+-        <h2>用户登录</h2>
+-        <span>还没有账号？<a href="${pageContext.request.contextPath}/user/registerpage">注册</a></span>
+-    </div>
+-
+-    <form id="loginForm">
+-        <label for="username">用户名:</label>
+-        <input type="text" id="username" name="username" required>
+-        <br><br>
+-        <label for="password">密码:</label>
+-        <input type="password" id="password" name="password" required>
+-        <br><br>
+-        <button type="button" onclick="login()">登录</button>
+-    </form>
+-
+-    <div id="responseMessage"></div>
+-</div>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/css/allfuns.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/css/allfuns.css b/target/MySSM/WEB-INF/css/allfuns.css
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/css/allfuns.css	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,56 +0,0 @@
+-body {
+-    margin: 0;
+-    font-family: Arial, sans-serif;
+-}
+-
+-.header {
+-    background-color: #333;
+-    color: white;
+-    padding: 10px 20px;
+-    display: flex;
+-    justify-content: space-between;
+-    align-items: center;
+-}
+-
+-.header .logo {
+-    font-size: 24px;
+-}
+-
+-.header .user-info {
+-    display: flex;
+-    align-items: center;
+-}
+-
+-.header .user-info img {
+-    width: 40px;
+-    height: 40px;
+-    border-radius: 50%;
+-    margin-right: 10px;
+-}
+-
+-.sidebar {
+-    width: 200px;
+-    background-color: #f4f4f4;
+-    height: 100vh;
+-    position: fixed;
+-    overflow-y: auto;
+-}
+-
+-.content {
+-    margin-left: 200px;
+-    padding: 20px;
+-}
+-
+-.sidebar ul {
+-    list-style: none;
+-    padding: 0;
+-}
+-
+-.sidebar ul li {
+-    padding: 10px;
+-    cursor: pointer;
+-}
+-
+-.sidebar ul li:hover {
+-    background-color: #ddd;
+-}
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_38__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_38__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_38__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_38__Changes_.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,259 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]" date="1736833094967" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2025/1/14 下午1:38 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Course.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Course.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/CourseService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Class.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Class.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/ClassService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/TeacherRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/TeacherServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/service/UserService.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/UserService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM.war" />
+-    <option name="AFTER_PATH" value="target/MySSM.war" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/MySSM.war" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/HomeController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/StudentRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Student.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Student.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/StudentController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/HomeController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/HomeController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/TeacherService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/LoginController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/ClassRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassRepository.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentService.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/ClassController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/ClassController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/repository/CourseRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="src/main/webapp/WEB-INF/images/pen.png" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/pen.png" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Student.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Student1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/StudentServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentServiceImpl.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/StudentService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/service/CourseServiceImpl.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseServiceImpl1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Course.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Course1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Teacher.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Class.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Class1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/controller/CourseController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseController.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/service/ClassService.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassService1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/CourseController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/classes/com/cnlbc/repository/ClassRepository.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassRepository1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/StudentController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/pojo/Teacher.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Teacher1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="target/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/LoginController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/LoginController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/classes/com/cnlbc/controller/TeacherController.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherController1.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="target/MySSM/WEB-INF/images/pen.png" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/pen1.png" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/jsp/mepassword.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/mepassword.jsp b/target/MySSM/WEB-INF/jsp/mepassword.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/mepassword.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,70 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: 十一月的肖邦
+-  Date: 2025/1/3
+-  Time: 10:22
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>更改密码</title>
+-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+-    <script>
+-        var contextPath = "${pageContext.request.contextPath}";
+-    </script>
+-</head>
+-<body>
+-<h2>更改密码</h2>
+-<form id="changePasswordForm">
+-    <label for="userId">用户ID:</label><br>
+-    <input type="text" id="userId" name="userId" required><br>
+-    <label for="oldPassword">旧密码:</label><br>
+-    <input type="password" id="oldPassword" name="oldPassword" required><br>
+-    <label for="newPassword">新密码:</label><br>
+-    <input type="password" id="newPassword" name="newPassword" required><br><br>
+-    <input type="button" value="更新密码" onclick="updatePassword()">
+-</form>
+-<script>
+-    function updatePassword() {
+-        // 获取表单数据
+-        var userId = $("#userId").val();
+-        var oldPassword = $("#oldPassword").val(); // 在真实应用中应加密这个值
+-        var newPassword = $("#newPassword").val(); // 在真实应用中应加密这个值
+-
+-        // 创建JSON对象
+-        var data = {
+-            "userId": userId,
+-            "oldPassword": oldPassword,
+-            "newPassword": newPassword
+-        };
+-        console.log("发送的数据是"+data)
+-        // 发送PUT请求
+-        $.ajax({
+-            url: contextPath+'/user/me/password',
+-            type: 'POST',
+-            contentType: 'application/json',
+-            data: JSON.stringify(data),
+-            success: function (response) {
+-                // 处理成功的响应
+-                if (response.success) {
+-                    if(response.success){
+-                        alert("密码更新成功,请重新登录");
+-                        location.href=contextPath+"/user/loginpage"
+-                    }
+-                } else {
+-                    alert("密码更新失败: " + response.message);
+-                }
+-            },
+-            error: function (xhr, status, error) {
+-                // 处理错误的响应
+-                alert('密码更新失败，请重试。错误信息: ' + xhr.responseText);
+-            }
+-        });
+-    }
+-</script>
+-</body>
+-</html>
+Index: target/MySSM/WEB-INF/js/teacher.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/js/teacher.js b/target/MySSM/WEB-INF/js/teacher.js
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/js/teacher.js	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,176 +0,0 @@
+-// 从HTML元素中读取数据
+-var paginationElement = $(".pagination");
+-var currentPage = parseInt(paginationElement.data("current-page"), 10) || 1;
+-var totalPages = parseInt(paginationElement.data("total-pages"), 10) || 1;
+-var pageSize = parseInt(paginationElement.data("page-size"), 10) || 10;
+-
+-
+-$(document).ready(function() {
+-    // 初始化加载
+-    loadTeachers(currentPage, pageSize, "", "");
+-
+-    // 上一页按钮点击事件
+-    $(".pagination a:contains('上一页')").click(function(event) {
+-        event.preventDefault();
+-        if (currentPage > 1) {
+-            currentPage--;
+-            var searchName = $("#searchName").val();
+-            var searchId = $("#searchId").val();
+-            loadTeachers(currentPage, pageSize, searchName, searchId);
+-        }
+-    });
+-
+-    // 下一页按钮点击事件
+-    $(".pagination a:contains('下一页')").click(function(event) {
+-        event.preventDefault();
+-        if (currentPage < totalPages) {
+-            currentPage++;
+-            var searchName = $("#searchName").val();
+-            var searchId = $("#searchId").val();
+-            loadTeachers(currentPage, pageSize, searchName, searchId);
+-        }
+-    });
+-
+-    // 搜索按钮点击事件
+-    $("#searchButton").click(function() {
+-        currentPage = 1; // 重置当前页为第一页
+-        var searchName = $("#searchName").val();
+-        var searchId = $("#searchId").val();
+-        loadTeachers(currentPage, pageSize, searchName, searchId);
+-    });
+-
+-    // 显示添加教师弹出框
+-    $("#addTeacherButton").click(function() {
+-        $("#addTeacherModal").addClass("show");
+-        $.ajax({
+-            url: contextPath + "/department/getDepartments", // 修改: url: contextPath + "/department/teacher"
+-            type: "GET",
+-            success: function(response) {
+-                // 填充部门数据到模态框中的下拉菜单
+-                var departmentSelect = $("#teacherDepartmentId");
+-                departmentSelect.empty();
+-                departmentSelect.append("<option value=''>请选择部门</option>");
+-                if (response && response.length > 0) {
+-                    response.forEach(function(department) {
+-                        departmentSelect.append("<option value='" + department.departmentId + "'>" + department.departmentName + "</option>");
+-                    });
+-                } else {
+-                    departmentSelect.append("<option value=''>无部门数据</option>");
+-                }
+-            },
+-            error: function(xhr, status, error) {
+-                console.error("加载教师数据失败:", xhr.responseText);
+-                toastr.error('加载教师数据失败: ' + error);
+-            }
+-        });
+-    });
+-
+-    // 隐藏添加教师弹出框
+-    $("#cancelAddTeacher").click(function() {
+-        $("#addTeacherModal").removeClass("show");
+-    });
+-
+-    // 提交添加教师表单
+-    $("#addTeacherForm").submit(function(event) {
+-        event.preventDefault();
+-        // 获取表单数据
+-        var formData = $(this).serializeArray().reduce(function(obj, item) {
+-            obj[item.name] = item.value;
+-            return obj;
+-        }, {});
+-
+-        // 获取当前最大teacherid
+-        $.ajax({
+-            url: contextPath + '/teacher/getMaxTeacherId',
+-            type: 'GET',
+-            success: function(maxTeacherId) {
+-                formData.teacherId = maxTeacherId + 1; // 设置新的teacherId
+-
+-                $.ajax({
+-                    url: contextPath + '/teacher/add',
+-                    type: 'POST',
+-                    contentType: 'application/json', // 确保设置正确的Content-Type
+-                    data: JSON.stringify(formData), // 确保数据格式正确
+-                    success: function(response) {
+-                        // 处理成功响应
+-                        toastr.success('教师添加成功');
+-                        $("#addTeacherModal").removeClass("show");
+-                        loadTeachers(currentPage, pageSize, "", ""); // 刷新教师列表
+-                    },
+-                    error: function(xhr, status, error) {
+-                        console.error('添加教师失败:', xhr.responseText);
+-                        toastr.error('添加教师失败: ' + error);
+-                    }
+-                });
+-            },
+-            error: function(xhr, status, error) {
+-                console.error('获取最大teacherid失败:', xhr.responseText);
+-                toastr.error('获取最大teacherid失败: ' + error);
+-            }
+-        });
+-    });
+-});
+-
+-function confirmDelete(teacherId) {
+-    if (confirm("您确定要删除工号为 " + teacherId + " 的教师吗？")) {
+-        $.ajax({
+-            url: contextPath + "/teacher/delete/" + teacherId,
+-            type: 'DELETE',
+-            success: function(response) {
+-                toastr.success('删除教师成功');
+-                loadTeachers(currentPage, pageSize, "", ""); // 刷新教师列表
+-            },
+-            error: function(xhr, status, error) {
+-                console.error('删除教师失败:', xhr.responseText);
+-                toastr.error('删除教师失败: ' + error);
+-            }
+-        });
+-    }
+-}
+-function loadTeachers(page, pageSize, searchName, searchId) {
+-    console.log("Loading teachers for page: " + page);
+-    $.ajax({
+-        url: contextPath + "/teacher/findall",
+-        type: "GET",
+-        data: {
+-            page: page,
+-            pageSize: pageSize,
+-            name: searchName,
+-            id: searchId
+-        },
+-        success: function(response) {
+-            var teachers = response.teachers;
+-            var tbody = $("#teacherTable tbody");
+-            tbody.empty();
+-            if (teachers && teachers.length > 0) {
+-                teachers.forEach(function(teacher) {
+-                    var row = "<tr>" +
+-                        "<td>" + teacher.teacherId + "</td>" +
+-                        "<td>" + teacher.name + "</td>" +
+-                        "<td>" + teacher.gender + "</td>" +
+-                        "<td>" + teacher.title + "</td>" +
+-                        "<td>" + teacher.fieldOfStudy + "</td>" +
+-                        "<td>" + teacher.contactNumber + "</td>" +
+-                        "<td>" + teacher.departmentId + "</td>" +
+-                        "<td class=\"action-links\">" +
+-                        "<button class=\"btn-edit\" onclick=\"window.location.href='" + contextPath + "/teacher/edit/" + teacher.teacherId + "'\">编辑</button>" +
+-                        "<button class=\"btn-delete\" onclick=\"confirmDelete('" + teacher.teacherId + "')\">删除</button>" +
+-                        "<button class=\"btn-detail\" onclick=\"window.location.href='" + contextPath + "/teacher/detail/" + teacher.teacherId + "'\">详情</button>" +
+-                        "</td>" +
+-                        "</tr>";
+-                    tbody.append(row);
+-                });
+-            } else {
+-                tbody.append("<tr><td colspan='8'>没有找到教师数据</td></tr>");
+-            }
+-
+-            // 更新分页信息
+-            $("#currentPage").text(response.currentPage || 1);
+-            $("#totalPages").text(response.totalPages || 1);
+-        },
+-        error: function(xhr, status, error) {
+-            console.error("加载教师数据失败:", xhr.responseText); // 更详细的错误信息
+-            toastr.error('加载教师数据失败: ' + error);
+-        }
+-    });
+-}
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/jsp/teacher.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/teacher.jsp b/target/MySSM/WEB-INF/jsp/teacher.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/teacher.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,105 +0,0 @@
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+-<html>
+-<head>
+-    <title>教师管理</title>
+-    <!-- 引入 jQuery -->
+-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+-    <!-- 引入 toastr CSS -->
+-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+-    <!-- 引入 toastr JS -->
+-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+-    <!-- 其他 CSS 文件 -->
+-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/teacher.css">
+-</head>
+-<body>
+-<h1>教师管理</h1>
+-<div class="action-links">
+-    <button class="add-button" id="addTeacherButton">添加教师</button>
+-    <div class="search-container">
+-        <input type="text" id="searchName" placeholder="按姓名搜索" class="search-input">
+-        <input type="text" id="searchId" placeholder="按工号搜索" class="search-input">
+-        <button type="button" id="searchButton" class="search-button">搜索</button>
+-    </div>
+-</div>
+-<table id="teacherTable">
+-    <thead>
+-    <tr>
+-        <th>工号</th>
+-        <th>姓名</th>
+-        <th>性别</th>
+-        <th>职称</th>
+-        <th>研究领域</th>
+-        <th>联系电话</th>
+-        <th>部门ID</th>
+-        <th>操作</th>
+-    </tr>
+-    </thead>
+-    <tbody>
+-    <!-- 动态生成的行将插入到这里 -->
+-    </tbody>
+-</table>
+-<div class="pagination"
+-     data-current-page="${empty param.page ? 1 : param.page}"
+-     data-total-pages="${empty totalPages ? 1 : totalPages}"
+-     data-page-size="${empty param.pageSize ? 10 : param.pageSize}">
+-    <c:if test="${param.page > 1}">
+-        <a href="?page=${param.page - 1}&pageSize=${param.pageSize}">上一页</a>
+-    </c:if>
+-    <span>当前页: <span id="currentPage">${empty param.page ? 1 : param.page}</span> / 总页数: <span id="totalPages">${empty totalPages ? 1 : totalPages}</span></span>
+-    <c:if test="${param.page < totalPages}">
+-        <a href="?page=${param.page + 1}&pageSize=${param.pageSize}">下一页</a>
+-    </c:if>
+-</div>
+-<script>
+-    // 将 contextPath 传递给全局变量
+-    var contextPath = "${pageContext.request.contextPath}";
+-</script>
+-<!-- 引入 teacher.js 文件 -->
+-<script src="${pageContext.request.contextPath}/js/teacher.js"></script>
+-<!-- 引入 allfuns.js 文件 -->
+-<script src="${pageContext.request.contextPath}/js/allfuns.js"></script>
+-
+-<!-- 添加 -->
+-<div id="addTeacherModal" class="modal">
+-    <div class="modal-content">
+-        <h2>添加教师</h2>
+-        <form id="addTeacherForm">
+-            <label for="teacherName">姓名:</label>
+-            <input type="text" id="teacherName" name="name" required><br>
+-
+-            <label for="teacherGender">性别:</label>
+-            <select id="teacherGender" name="gender" required>
+-                <option value="男">男</option>
+-                <option value="女">女</option>
+-            </select><br>
+-
+-            <label for="teacherTitle">职称:</label>
+-            <input type="text" id="teacherTitle" name="title"><br>
+-
+-            <label for="teacherFieldOfStudy">研究领域:</label>
+-            <input type="text" id="teacherFieldOfStudy" name="fieldOfStudy"><br>
+-
+-            <label for="teacherContactNumber">联系电话:</label>
+-            <input type="text" id="teacherContactNumber" name="contactNumber"><br>
+-
+-            <label for="teacherDepartmentId">部门:</label>
+-            <select id="teacherDepartmentId" name="departmentId" required>
+-                <option value="">请选择部门</option>
+-                <c:if test="${not empty departments}">
+-                    <c:forEach items="${departments}" var="department">
+-                        <option value="${department.departmentId}">${department.departmentName}</option>
+-                    </c:forEach>
+-                </c:if>
+-                <c:if test="${empty departments}">
+-                    <option value="">无部门数据</option>
+-                </c:if>
+-            </select><br>
+-
+-            <button type="submit">提交</button>
+-            <button type="button" id="cancelAddTeacher">取消</button>
+-        </form>
+-
+-    </div>
+-</div>
+-
+Index: target/MySSM/WEB-INF/js/allfuns.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/js/allfuns.js b/target/MySSM/WEB-INF/js/allfuns.js
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/js/allfuns.js	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,73 +0,0 @@
+-function navigate(module) {
+-    var content = document.getElementById('main-content');
+-
+-    switch (module) {
+-        case 'home':
+-            content.innerHTML = '<h1>首页</h1><p>这里是系统的首页。</p>';
+-            break;
+-        case 'teacher':
+-            fetch(contextPath + "/home/teachermanage")
+-                .then(response => response.text())
+-                .then(data => {
+-                    content.innerHTML = data;
+-
+-                    // 重新加载所有 <script> 标签
+-                    const scriptTags = content.getElementsByTagName('script');
+-                    Array.from(scriptTags).forEach(script => {
+-                        if (script.src) {
+-                            // 如果有 src 属性，创建新的 <script> 标签并插入到 body 中
+-                            const newScript = document.createElement('script');
+-                            newScript.src = script.src;
+-                            newScript.async = false; // 确保按顺序加载
+-                            document.body.appendChild(newScript);
+-                        } else {
+-                            // 如果是内联脚本，直接执行
+-                            eval(script.innerHTML);
+-                        }
+-                    });
+-
+-                    // 确保 jQuery 已加载后再执行 teacher.js
+-                    if (typeof $ === 'undefined') {
+-                        console.error("jQuery is not loaded correctly.");
+-                    } else {
+-                        $(document).ready(function() {
+-                            console.log("Document ready, initializing...");
+-                            // 初始化 teacher.js 中的功能
+-                            loadTeachers(1, 10); // 或者根据实际情况初始化
+-                        });
+-                    }
+-                })
+-                .catch(error => console.error('Error loading teacher.jsp:', error));
+-            break;
+-        case 'student':
+-            content.innerHTML = '<h1>学生管理</h1><p>这里是学生管理模块。</p>';
+-            break;
+-        case 'class':
+-            content.innerHTML = '<h1>班级管理</h1><p>这里是班级管理模块。</p>';
+-            break;
+-        case 'course':
+-            content.innerHTML = '<h1>课程管理</h1><p>这里是课程管理模块。</p>';
+-            break;
+-        case 'college':
+-            content.innerHTML = '<h1>学院管理</h1><p>这里是学院管理模块。</p>';
+-            break;
+-        //我的
+-        case 'profile':
+-            console.log(contextPath)
+-            location.href = contextPath + "/user/mepage";
+-            break;
+-        //设置
+-        case 'settings':
+-            location.href = "";
+-            break;
+-        //退出
+-        case 'logout':
+-            // 在这里执行退出登录逻辑，例如重定向到登录页面
+-            location.href = contextPath + "/user/loginpage";
+-            // 实际应用中可能是：
+-            // window.location.href = 'login.html';
+-            break;
+-        default:
+-            content.innerHTML = '<h1>页面未找到</h1><p>抱歉，您请求的页面不存在。</p>';
+-    }
+-}
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_7_39__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_7_39__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_7_39__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_7_39__Changes_.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2025_1_13_下午7_39_[Changes]" date="1736768398792" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_下午7_39_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2025/1/13 下午7:39 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/jsp/home.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/home.jsp b/target/MySSM/WEB-INF/jsp/home.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/home.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,39 +0,0 @@
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<%@ page isELIgnored="false" %>
+-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+-<html>
+-<head>
+-    <title>User展示</title>
+-    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+-    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+-    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+-</head>
+-<body>
+-<div class="container">
+-    <h2>用户表格</h2>
+-    <table class="table table-striped">
+-        <thead>
+-        <tr>
+-            <th>ID</th>
+-            <th>用户名</th>
+-            <th>密码</th>
+-        </tr>
+-        </thead>
+-        <tbody>
+-        <c:forEach items="${list}" var="user">
+-            <tr>
+-                <td>${user.usertid}</td>
+-                <td>${user.username}</td>
+-                <td>${user.password}</td>
+-            </tr>
+-        </c:forEach>
+-        </tbody>
+-    </table>
+-</div>
+-</body>
+-</html>
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/css/common.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/css/common.css b/target/MySSM/WEB-INF/css/common.css
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/css/common.css	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,134 +0,0 @@
+-/* ... existing code ... */
+-body {
+-    margin: 0;
+-    font-family: Arial, sans-serif;
+-    background-color: #f4f4f9;
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-    height: 100vh;
+-}
+-
+-.header {
+-    background-color: #333;
+-    color: white;
+-    padding: 10px 20px;
+-    display: flex;
+-    justify-content: space-between;
+-    align-items: center;
+-}
+-
+-.header .logo {
+-    font-size: 24px;
+-}
+-
+-.header .user-info {
+-    display: flex;
+-    align-items: center;
+-}
+-
+-.header .user-info img {
+-    width: 40px;
+-    height: 40px;
+-    border-radius: 50%;
+-    margin-right: 10px;
+-}
+-
+-.sidebar {
+-    width: 200px;
+-    background-color: #f4f4f4;
+-    height: 100vh;
+-    position: fixed;
+-    overflow-y: auto;
+-}
+-
+-.content {
+-    margin-left: 200px;
+-    padding: 20px;
+-}
+-
+-.sidebar ul {
+-    list-style: none;
+-    padding: 0;
+-}
+-
+-.sidebar ul li {
+-    padding: 10px;
+-    cursor: pointer;
+-}
+-
+-.sidebar ul li:hover {
+-    background-color: #ddd;
+-}
+-
+-.form-container {
+-    background-color: #fff;
+-    padding: 20px;
+-    border-radius: 8px;
+-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+-    width: 300px;
+-}
+-
+-.form-header {
+-    text-align: center;
+-    margin-bottom: 20px;
+-}
+-
+-.form-header h2 {
+-    margin: 0;
+-    font-size: 24px;
+-    color: #333;
+-}
+-
+-.form-header span {
+-    font-size: 14px;
+-    color: #666;
+-}
+-
+-.form-header a {
+-    color: #007bff;
+-    text-decoration: none;
+-}
+-
+-.form-header a:hover {
+-    text-decoration: underline;
+-}
+-
+-label {
+-    display: block;
+-    margin-bottom: 5px;
+-    font-weight: bold;
+-    color: #333;
+-}
+-
+-input[type="text"],
+-input[type="password"] {
+-    width: 100%;
+-    padding: 8px;
+-    margin-bottom: 10px;
+-    border: 1px solid #ccc;
+-    border-radius: 4px;
+-    box-sizing: border-box;
+-}
+-
+-button {
+-    width: 100%;
+-    padding: 10px;
+-    background-color: #007bff;
+-    color: #fff;
+-    border: none;
+-    border-radius: 4px;
+-    cursor: pointer;
+-    font-size: 16px;
+-}
+-
+-button:hover {
+-    background-color: #0056b3;
+-}
+-
+-#responseMessage {
+-    margin-top: 10px;
+-    text-align: center;
+-    color: red;
+-}
+-/* ... existing code ... */
+\ No newline at end of file
+Index: target/MySSM/WEB-INF/jsp/success.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/MySSM/WEB-INF/jsp/success.jsp b/target/MySSM/WEB-INF/jsp/success.jsp
+deleted file mode 100644
+--- a/target/MySSM/WEB-INF/jsp/success.jsp	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ /dev/null	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
+@@ -1,17 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: 十一月的肖邦
+-  Date: 2024/12/30
+-  Time: 9:55
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<html>
+-<head>
+-    <title>Title</title>
+-  <h2>测试成功le</h2>
+-</head>
+-<body>
+-
+-</body>
+-</html>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ArtifactsWorkspaceSettings\">\n    <artifacts-to-build>\n      <artifact name=\"StudentManageSystem:war\" />\n    </artifacts-to-build>\n  </component>\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d027a2ce-1732-460e-bf18-fa3afdfc0b20\" name=\"Changes\" comment=\"2\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/MySSM_war.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/MySSM_war_exploded.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/MySSM.iml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM.war\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/MySSM.war\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/mybatis-config.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/spring-mvc.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/classes/spring-mybatis.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/me.jsp\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/cnlbc/repository/CourseRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/cnlbc/repository/StudentRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/database.properties\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/mybatis-config.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/spring-mvc.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/spring-mybatis.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/maven-archiver/pom.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/maven-archiver/pom.properties\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n        <option value=\"CSS File\" />\n        <option value=\"Class\" />\n        <option value=\"Jsp File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;TZJ-BYTE&quot;\n  }\n}</component>\n  <component name=\"GithubProjectSettings\">\n    <option name=\"branchProtectionPatterns\">\n      <list>\n        <option value=\"mytest\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;git@github.com:TZJ-BYTE/StudentManageSystem.git&quot;,\n    &quot;accountId&quot;: &quot;bdbd2299-546e-4992-a0c5-6a3e87ec9cb3&quot;\n  }\n}</component>\n  <component name=\"LogFilters\">\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\n    <option name=\"FILTER_INFO\" value=\"true\" />\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\n    <option name=\"CUSTOM_FILTER\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"2r6C3xSzgP4SfJFaUnY0Xn3uAtD\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\n    &quot;Maven.MySSM [clean].executor&quot;: &quot;Run&quot;,\n    &quot;Maven.MySSM [install].executor&quot;: &quot;Run&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;Tomcat Server.Tomcat .executor&quot;: &quot;Run&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;tzj&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,\n    &quot;spring.configuration.checksum&quot;: &quot;1f27b7840dc100f3672613a1c2cbb827&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/css\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Tomcat \" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat \" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\n      <deployment>\n        <artifact name=\"MySSM:war\">\n          <settings>\n            <option name=\"CONTEXT_PATH\" value=\"/MySSM_war\" />\n          </settings>\n        </artifact>\n      </deployment>\n      <server-settings>\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"0107c771-7a51-49b3-a37e-65d67ecfc876\" />\n      </server-settings>\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\n      <predefined_log_file id=\"Tomcat Manager\" />\n      <predefined_log_file id=\"Tomcat Host Manager\" />\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\n      <RunnerSettings RunnerId=\"Debug\">\n        <option name=\"DEBUG_PORT\" value=\"3716\" />\n      </RunnerSettings>\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\n        <STARTUP>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </STARTUP>\n        <SHUTDOWN>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </SHUTDOWN>\n      </ConfigurationWrapper>\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\n        <STARTUP>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </STARTUP>\n        <SHUTDOWN>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </SHUTDOWN>\n      </ConfigurationWrapper>\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\n        <STARTUP>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </STARTUP>\n        <SHUTDOWN>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </SHUTDOWN>\n      </ConfigurationWrapper>\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\n        <STARTUP>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </STARTUP>\n        <SHUTDOWN>\n          <option name=\"USE_DEFAULT\" value=\"true\" />\n          <option name=\"SCRIPT\" value=\"\" />\n          <option name=\"VM_PARAMETERS\" value=\"\" />\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\n        </SHUTDOWN>\n      </ConfigurationWrapper>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n        <option name=\"BuildArtifacts\" enabled=\"true\">\n          <artifact name=\"MySSM:war\" />\n          <artifact name=\"StudentManageSystem:war\" />\n        </option>\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d027a2ce-1732-460e-bf18-fa3afdfc0b20\" name=\"Changes\" comment=\"\" />\n      <created>1735869944515</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1735869944515</updated>\n      <workItem from=\"1735869945948\" duration=\"561000\" />\n      <workItem from=\"1735870524078\" duration=\"4284000\" />\n      <workItem from=\"1736071244077\" duration=\"1281000\" />\n      <workItem from=\"1736072809695\" duration=\"5110000\" />\n      <workItem from=\"1736077932276\" duration=\"3541000\" />\n      <workItem from=\"1736081482632\" duration=\"5452000\" />\n      <workItem from=\"1736143486690\" duration=\"63000\" />\n      <workItem from=\"1736152616231\" duration=\"1965000\" />\n      <workItem from=\"1736173232148\" duration=\"173000\" />\n      <workItem from=\"1736173413311\" duration=\"2611000\" />\n      <workItem from=\"1736260664186\" duration=\"27000\" />\n      <workItem from=\"1736398394991\" duration=\"1062000\" />\n      <workItem from=\"1736478850059\" duration=\"4569000\" />\n      <workItem from=\"1736673860148\" duration=\"44415000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"2\">\n      <created>1735871983949</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1735871983949</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"2\">\n      <created>1735871988018</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1735871988018</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1735919178213</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1735919178213</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"1.0\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736086855969</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736086855969</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"1.0\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736768181174</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736768181175</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"教师模块优化\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736768201590</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736768201590</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"教师模块优化\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736768845962</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736768845962</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"教师模块优化\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736769495266</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736769495266</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"教师模块优化\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1736769555996</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1736769555997</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"10\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"2\" />\n    <MESSAGE value=\"1.0\" />\n    <MESSAGE value=\"教师模块优化\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"教师模块优化\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ b/.idea/workspace.xml	(date 1736835928930)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ArtifactsWorkspaceSettings">
+     <artifacts-to-build>
+-      <artifact name="StudentManageSystem:war" />
++      <artifact name="MySSM:war" />
+     </artifacts-to-build>
+   </component>
+   <component name="AutoImportSettings">
+@@ -10,32 +10,118 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="2">
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MySSM_war.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MySSM_war_exploded.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/MySSM.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM.war" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/spring-mvc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/me.jsp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/CourseRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/StudentRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.attach_pid543701" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM.war" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/ClassController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/CourseController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/DepartmentController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/HomeController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/Initialize.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/StudentController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Class.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Course.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Department.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Msg.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Student.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/Teacher.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/pojo/User.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/ClassRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/CourseRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/DepartmentRepository.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/StudentRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/TeacherRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/ClassService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/CourseServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/DepartmentService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/DepartmentServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/StudentServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/TeacherServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/service/UserServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/allfuns.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/common.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/teacher.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/images/1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/allfuns.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/login.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/register.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/teacher.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/allfuns.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/home.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/login.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/mepassword.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/register.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/success.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/teacher.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/DmJdbcDriver18-8.1.1.193.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/aspectjweaver-1.8.13.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/c3p0-0.9.5.2.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jackson-annotations-2.10.1.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jackson-core-2.10.1.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jackson-core-asl-1.9.13.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jackson-databind-2.10.1.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/lombok-1.18.16.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/mchange-commons-java-0.2.11.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/mybatis-3.5.5.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/mybatis-spring-2.0.5.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-aop-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-aspects-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-beans-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-context-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-core-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-expression-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-jcl-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-jdbc-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-tx-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-web-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/lib/spring-webmvc-5.0.11.RELEASE.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/web.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/ClassController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/CourseController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/DepartmentController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/HomeController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/Initialize.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/LoginController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/StudentController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/controller/TeacherController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Class.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Course.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Department.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Msg.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Student.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/Teacher.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/pojo/User.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/ClassRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/CourseRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/DepartmentRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/StudentRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/TeacherRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/ClassService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/CourseService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/CourseServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/DepartmentService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/DepartmentServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/StudentService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/StudentServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/TeacherServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/service/UserServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -100,28 +186,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;Maven.MySSM [clean].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.MySSM [install].executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Tomcat Server.Tomcat .executor&quot;: &quot;Run&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;tzj&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+-    &quot;spring.configuration.checksum&quot;: &quot;1f27b7840dc100f3672613a1c2cbb827&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Maven.MySSM [clean].executor": "Run",
++    "Maven.MySSM [install].executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Tomcat Server.Tomcat .executor": "Run",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "tzj",
++    "kotlin-language-version-configured": "true",
++    "list.type.of.created.stylesheet": "CSS",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.pluginManager",
++    "spring.configuration.checksum": "1f27b7840dc100f3672613a1c2cbb827",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/css" />
+@@ -211,8 +297,8 @@
+       <method v="2">
+         <option name="Make" enabled="true" />
+         <option name="BuildArtifacts" enabled="true">
+-          <artifact name="MySSM:war" />
+           <artifact name="StudentManageSystem:war" />
++          <artifact name="MySSM:war" />
+         </option>
+       </method>
+     </configuration>
+@@ -340,6 +426,7 @@
+     <MESSAGE value="2" />
+     <MESSAGE value="1.0" />
+     <MESSAGE value="教师模块优化" />
+-    <option name="LAST_COMMIT_MESSAGE" value="教师模块优化" />
++    <MESSAGE value="教师模块完善" />
++    <option name="LAST_COMMIT_MESSAGE" value="教师模块完善" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 1c38e2d867428ad799c973ba31cf5492e8c45335)
++++ b/.idea/vcs.xml	(date 1736835928930)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
