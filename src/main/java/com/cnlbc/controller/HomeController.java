@@ -12,16 +12,20 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping({"/home"})
 public class HomeController {
     @Autowired
     private UserService userService;
+    private User user;
 
     public HomeController() {
     }
@@ -33,10 +37,6 @@ public class HomeController {
         return "home";
     }
     //进入主页面
-    @RequestMapping("/allfunspage")
-    public String homepage(){
-        return "allfuns";
-    }
 
     //进入教师管理页面
     @RequestMapping("/teachermanage")

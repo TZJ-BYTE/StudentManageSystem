@@ -9,4 +9,8 @@ public interface UserService {
     public List<User> findUserByName(String username);
     public boolean registerUser(User user);
     public Integer getMaxUsertId();
+    public void updateUserName(String oldname,String newvalue);
+    public void updatePassword(String username,String password);
+    public List<User>  findByPasswd (String username,String password);
+    public void insertUser(String username,String password);
 }

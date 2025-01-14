@@ -32,4 +32,22 @@ public class UserServiceImpl implements UserService {
     public Integer getMaxUsertId() {
         return userRepository.getMaxUsertId();
     }
+
+    @Override
+    public  void updateUserName(String oldname, String newvalue) {
+        userRepository.updateUserName(oldname, newvalue);
+    }
+    @Override
+    public void updatePassword(String username,String password){
+        userRepository.updatePassword(username,password);
+    }
+    @Override
+    public List<User>  findByPasswd (String username,String password){
+        return userRepository.findByPasswd(username,password);
+    }
+    @Override
+    public void insertUser(String username,String password){
+        userRepository.insertUser(username,password);
+    }
+
 }
