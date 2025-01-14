@@ -8,8 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MySSM" />
-        <module name="StudentManageSystem" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="StudentManageSystem" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
