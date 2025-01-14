@@ -51,13 +51,18 @@ public class LoginController {
         return "register";
     }
 
-    //用户注册
+    // 用户注册
     @RequestMapping("/register")
     @ResponseBody
-    public Msg Registe() {
+    public Msg Registe(@RequestBody User user) {
         Msg message = new Msg();
-        message.setMessage("注册成功");
-        message.setSuccess(true);
+        if (userService.registerUser(user)) {
+            message.setMessage("注册成功");
+            message.setSuccess(true);
+        } else {
+            message.setMessage("注册失败");
+            message.setSuccess(false);
+        }
         return message;
     }
     //进入查看信息页面
@@ -99,5 +104,12 @@ public class LoginController {
         message.setSuccess(true);
         return message;
     }
+
+   @GetMapping("/getMaxUsertId")
+   @ResponseBody
+   public ResponseEntity<Integer> getMaxUsertId() {
+       Integer maxUsertId = userService.getMaxUsertId();
+       return ResponseEntity.ok(maxUsertId);
+   }
 
 }

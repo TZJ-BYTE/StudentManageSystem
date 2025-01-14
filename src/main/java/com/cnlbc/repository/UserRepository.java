@@ -7,4 +7,6 @@ import java.util.List;
 public interface UserRepository {
     public List<User> findAllUser();
     public List<User> findUserByName(String username);
+    public boolean registerUser(User user);
+    public Integer getMaxUsertId();
 }

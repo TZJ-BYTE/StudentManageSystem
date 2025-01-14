@@ -22,4 +22,14 @@ public class UserServiceImpl implements UserService {
     public List<User> findUserByName(String username) {
         return userRepository.findUserByName(username);
     }
+
+    @Override
+    public boolean registerUser(User user) {
+        return userRepository.registerUser(user);
+    }
+
+    @Override
+    public Integer getMaxUsertId() {
+        return userRepository.getMaxUsertId();
+    }
 }
