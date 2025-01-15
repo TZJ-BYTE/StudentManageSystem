@@ -58,12 +58,12 @@ function navigate(module) {
             break;
         //设置
         case 'settings':
-            location.href = "";
+            location.href = contextPath + "/user/settings"; // 修改: 设置正确的 URL 路径
             break;
         //退出
         case 'logout':
             // 在这里执行退出登录逻辑，例如重定向到登录页面
-            location.href = contextPath + "/user/loginpage";
+            location.href = contextPath + "/user/logout";
             // 实际应用中可能是：
             // window.location.href = 'login.html';
             break;
@@ -115,31 +115,24 @@ document.getElementById('editNickname').addEventListener('click', function () {
     confirmBtn.addEventListener('click', function () {
         displayDiv.innerText = input.value; // 更新显示的昵称
         // 发送GET请求到/user/updateusername
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', contextPath+'/user/updateusername?newValue=' + encodeURIComponent(input.value), true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) { // 检查请求是否完成
-                try {
-                    var response = JSON.parse(xhr.responseText); // 尝试解析响应文本为JSON
-                    if (response === true) {
-                        // 响应是布尔值true，表示更新成功
-                        console.log('Nickname updated successfully');
-                        alert("修改昵称成功");
-                    } else {
-                        // 响应是布尔值false，表示更新失败
-                        alert("修改昵称失败请重试");
-                    }
-                } catch (e) {
-                    // 响应不是有效的JSON，可能是服务器返回了错误信息
-                    alert("服务器错误：" + xhr.responseText);
+
+        // 使用 jQuery 的 $.ajax 方法
+        $.ajax({
+            url: contextPath + '/home/updateusername',
+            type: 'GET',
+            data: { newValue: encodeURIComponent(input.value) },
+            success: function (response) {
+                if (response === true) {
+                    console.log('Nickname updated successfully');
+                    alert("修改昵称成功");
+                } else {
+                    alert("修改昵称失败请重试");
                 }
+            },
+            error: function (xhr, status, error) {
+                alert("服务器错误：" + xhr.responseText);
             }
-        };
-        xhr.onerror = function () {
-            // 请求过程中发生错误
-            alert("请求出错，请检查网络连接或联系管理员");
-        };
-        xhr.send();
+        });
     });
     // 移除原有blur事件监听器，因为我们希望在点击确认按钮后才隐藏输入框
     input.removeEventListener('blur', arguments.callee);
@@ -155,17 +148,25 @@ function checkAndUpdatePassword() {
         return;
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', contextPath+'/user/updatepasswd?originalPassword=' + encodeURIComponent(originalPassword) + '&newPassword=' + encodeURIComponent(newPassword), true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            var response = JSON.parse(xhr.responseText); // 解析响应文本为JSON对象
-            if (xhr.status === 200 && response) {
+    // 发送GET请求到/user/updatepasswd
+
+    // 使用 jQuery 的 $.ajax 方法
+    $.ajax({
+        url: contextPath + '/home/updatepasswd',
+        type: 'GET',
+        data: {
+            originalPassword: encodeURIComponent(originalPassword),
+            newPassword: encodeURIComponent(newPassword)
+        },
+        success: function (response) {
+            if (response) {
                 alert('密码更新成功！');
             } else {
-                alert('密码更新失败：' + (xhr.statusText || 'Unknown error'));
+                alert('密码更新失败：' + (xhr.statusText || '未知错误'));
             }
+        },
+        error: function (xhr, status, error) {
+            alert("服务器错误：" + xhr.responseText);
         }
-    };
-    xhr.send();
+    });
 }

@@ -10,145 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="合并冲突">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_7_39__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_13_下午7_39_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_36__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_1_38__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Class.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Class1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/ClassService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Course1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/CourseServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/HomeController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/LoginController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Student1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/StudentServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/Teacher1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/TeacherServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/UserServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/pen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/pen1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_36_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Class.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Class1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/ClassService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Course1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/CourseServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/HomeController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/LoginController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/MySSM.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Student1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/StudentServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/Teacher1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherController1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/TeacherServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserRepository1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserService1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/UserServiceImpl1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/pen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/pen1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025_1_14_下午1_38_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/pen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/images/pen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/MySSM.war" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/MySSM.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/allfuns.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/allfuns.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/allfuns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allfuns.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/me.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/allfuns.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/allfuns.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/allfuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/allfuns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/MySSM/WEB-INF/jsp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnlbc/repository/UserRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +93,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat .executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging tzj",
+    "git-widget-placeholder": "tzj",
     "kotlin-language-version-configured": "true",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "1f27b7840dc100f3672613a1c2cbb827",
     "vue.rearranger.settings.migration": "true"
   }
@@ -360,7 +230,8 @@
       <workItem from="1736398394991" duration="1062000" />
       <workItem from="1736478850059" duration="4569000" />
       <workItem from="1736673860148" duration="44415000" />
-      <workItem from="1736835759574" duration="683000" />
+      <workItem from="1736835759574" duration="1106000" />
+      <workItem from="1736854534665" duration="9556000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1735871983949</created>

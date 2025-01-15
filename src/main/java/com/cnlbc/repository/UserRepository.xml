@@ -10,12 +10,12 @@
     <update id="updateUserName">
         update users
         set username = #{newvalue}
-        where username = #{oldname}
+        where usertid = #{usertid}
     </update>
     <update id="updatePassword">
         UPDATE users
         SET password = #{password}
-        WHERE username = #{username}
+        WHERE usertid = #{usertid}
     </update>
     <select id="findByPasswd" resultType="User">
         SELECT *

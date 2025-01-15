@@ -33,7 +33,9 @@ public class LoginController {
         String password = user.getPassword();
         Msg message = new Msg();
         if (validateUser(username, password)) {
-            session.setAttribute("user", user); // 将用户对象存入会话
+            // 获取完整的用户对象
+            User loggedInUser = userService.findUserByName(username).get(0);
+            session.setAttribute("user", loggedInUser); // 将用户对象存入会话
             message.setMessage("登录成功");
             message.setSuccess(true);
         } else {
@@ -62,7 +64,7 @@ public class LoginController {
     public Msg register(@RequestBody User user) { // 假设User类有username和password字段
         Msg message = new Msg(false, "注册账号");
         try {
-            userService.insertUser(user.getUsername(), user.getPassword());
+            userService.registerUser(user);
             message.setSuccess(true);
             message.setMessage("注册成功");
         } catch (Exception e) {
@@ -86,11 +88,6 @@ public class LoginController {
     }
 
 
-    //测试
-    @RequestMapping("/success")
-    public String success(){
-        return "success";
-    }
 
     private boolean validateUser(String username, String password) {
         if (userService == null) {
@@ -103,58 +100,10 @@ public class LoginController {
         }
         return false;
     }
-    //进入更改密码页面
-    @RequestMapping("/me/passwordpage")
-    public String passwordpage() {
-        return "mepassword";
-    }
-    //更改密码
-    // 处理 GET 请求，从请求参数中获取原始密码和新密码
-    @GetMapping("/updatepasswd")
-    public ResponseEntity<Boolean> updatePassword(@RequestParam String originalPassword,@RequestParam String newPassword,HttpSession session) {
-        boolean result;
-        User user = (User) session.getAttribute("user");
-        if(userService.findByPasswd(user.getUsername(),originalPassword)!=null){
-            try {
-                // 调用服务层方法来更新密码
-                userService.updatePassword(user.getUsername(), newPassword);
-                result=true;
-            } catch (Exception e) {
-                // 如果发生异常，则设置为false
-                result = false;
-            }
-        }
-       else result=false;
-        // 返回响应实体，包含结果和适当的HTTP状态码
-        return ResponseEntity.ok(result);
-    }
 
-    //更改用户
-    @GetMapping("/updateusername")
-    public ResponseEntity<Boolean> updateUsername(@RequestParam String newValue, HttpSession session) {
-        Boolean result;
-        System.out.println("新的昵称是" + escapeSingleQuotes(newValue) + "");
-        User user = (User) session.getAttribute("user");
-        String username= user.getUsername();
-        System.out.println("旧的昵称是" + escapeSingleQuotes(user.getUsername()) + "");
-        try {
-            // 这里处理newValue
-            userService.updateUserName(escapeSingleQuotes(username), escapeSingleQuotes(newValue));
-            result = true;
-        } catch (Exception e) {
-            // 如果发生异常，则设置为false
-            result = false;
-        }
-        System.out.println("New nickname: '" + escapeSingleQuotes(newValue) + "'");
-        System.out.println(result);
-        // 返回响应实体，包含结果和适当的HTTP状态码
-        return ResponseEntity.ok(result);
-    }
 
-    // 方法来处理字符串，为其添加单引号
-    private String escapeSingleQuotes(String input) {
-        return "'" + input.replace("'", "''") + "'";
-    }
+
+
 
 
    @GetMapping("/getMaxUsertId")
@@ -163,5 +112,10 @@ public class LoginController {
        Integer maxUsertId = userService.getMaxUsertId();
        return ResponseEntity.ok(maxUsertId);
    }
+@GetMapping("/logout")
+public String logout(HttpSession session) {
+    session.invalidate(); // 清除会话中的所有信息
+    return "redirect:/user/loginpage"; // 重定向到登录页面
+}
 
 }
