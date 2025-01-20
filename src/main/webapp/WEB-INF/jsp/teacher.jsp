@@ -17,9 +17,8 @@
 <div class="action-links">
     <button class="add-button" id="addTeacherButton">添加教师</button>
     <div class="search-container">
-        <input type="text" id="searchName" placeholder="按姓名搜索" class="search-input">
-        <input type="text" id="searchId" placeholder="按工号搜索" class="search-input">
-        <button type="button" id="searchButton" class="search-button">搜索</button>
+        <input type="text" id="searchTerm" placeholder="输入教师ID或姓名进行搜索">
+        <button id="searchButton">搜索</button>
     </div>
 </div>
 <table id="teacherTable">
@@ -65,6 +64,7 @@
     <div class="modal-content">
         <h2>添加教师</h2>
         <form id="addTeacherForm">
+
             <label for="teacherName">姓名:</label>
             <input type="text" id="teacherName" name="name" required><br>
 
@@ -99,7 +99,52 @@
             <button type="submit">提交</button>
             <button type="button" id="cancelAddTeacher">取消</button>
         </form>
-
     </div>
 </div>
 
+<!-- 新增: 编辑教师的模态框 -->
+<div id="editTeacherModal" class="modal">
+    <div class="modal-content">
+        <h2>编辑教师</h2>
+        <form id="editTeacherForm">
+
+            <label for="editTeacherId">工号:</label>
+            <input type="text" id="editTeacherId" name="teacherId" readonly>
+
+
+            <label for="editTeacherName">姓名:</label>
+            <input type="text" id="editTeacherName" name="name" required><br>
+
+            <label for="editTeacherGender">性别:</label>
+            <select id="editTeacherGender" name="gender" required>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select><br>
+
+            <label for="editTeacherTitle">职称:</label>
+            <input type="text" id="editTeacherTitle" name="title"><br>
+
+            <label for="editTeacherFieldOfStudy">研究领域:</label>
+            <input type="text" id="editTeacherFieldOfStudy" name="fieldOfStudy"><br>
+
+            <label for="editTeacherContactNumber">联系电话:</label>
+            <input type="text" id="editTeacherContactNumber" name="contactNumber"><br>
+
+            <label for="editTeacherDepartmentId">部门:</label>
+            <select id="editTeacherDepartmentId" name="departmentId" required>
+                <option value="">请选择部门</option>
+                <c:if test="${not empty departments}">
+                    <c:forEach items="${departments}" var="department">
+                        <option value="${department.departmentId}">${department.departmentName}</option>
+                    </c:forEach>
+                </c:if>
+                <c:if test="${empty departments}">
+                    <option value="">无部门数据</option>
+                </c:if>
+            </select><br>
+
+            <button type="submit">提交</button>
+            <button type="button" id="cancelEditTeacher">取消</button>
+        </form>
+    </div>
+</div>

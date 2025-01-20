@@ -48,4 +48,15 @@ public class TeacherServiceImpl implements TeacherService {
     public Integer getMaxTeacherId() {
         return teacherRepository.getMaxTeacherId();
     }
+
+    @Override
+    public List<Teacher> findTeacherByIdOrName(String searchTerm, int page, int pageSize) {
+        int offset = (page - 1) * pageSize;
+        return teacherRepository.findTeacherByIdOrName(searchTerm, offset, pageSize);
+    }
+
+    @Override
+    public int countTeachersByIdOrName(String searchTerm) {
+        return teacherRepository.countTeachersByIdOrName(searchTerm);
+    }
 }

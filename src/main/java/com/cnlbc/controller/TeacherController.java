@@ -1,5 +1,6 @@
 package com.cnlbc.controller;
 
+import com.cnlbc.pojo.Msg;
 import com.cnlbc.pojo.Teacher;
 import com.cnlbc.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/teacher")
 public class TeacherController {
-
-
 
     @Autowired
     private TeacherService teacherService;
@@ -33,30 +32,78 @@ public class TeacherController {
         response.put("totalPages", totalPages);
         return response;
     }
-    @GetMapping("/{teacherId}")
-    public Teacher findTeacherById(@PathVariable String teacherId) {
-        return teacherService.findTeacherById(Integer.valueOf(teacherId));
+
+    @GetMapping("/get/{teacherId}")
+    public Teacher findTeacherById(@PathVariable int teacherId) {
+        return teacherService.findTeacherById(teacherId);
     }
 
     @PostMapping("/add")
-    public String addTeacher(@RequestBody Teacher teacher) {
-        teacherService.addTeacher(teacher);
-        return "success";
+    public Msg addTeacher(@RequestBody Teacher teacher) {
+        Msg message = new Msg(false, "添加教师");
+        try {
+            teacherService.addTeacher(teacher);
+            message.setSuccess(true);
+            message.setMessage("教师添加成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            message.setSuccess(false);
+            message.setMessage("教师添加失败");
+        }
+        return message;
     }
+
     @GetMapping("/getMaxTeacherId")
     public Integer getMaxTeacherId() {
         return teacherService.getMaxTeacherId();
     }
+
     @PutMapping("/edit/{teacherId}")
-    public String editTeacher(@PathVariable String teacherId, @RequestBody Teacher teacher) {
+    public Msg editTeacher(@PathVariable String teacherId, @RequestBody Teacher teacher) {
+        Msg message = new Msg(false, "修改教师");
         teacher.setTeacherId(Integer.valueOf(teacherId));
-        teacherService.updateTeacher(teacher);
-        return "success";
+        try {
+            teacherService.updateTeacher(teacher);
+            message.setSuccess(true);
+            message.setMessage("教师修改成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            message.setSuccess(false);
+            message.setMessage("教师修改失败");
+        }
+        return message;
     }
 
     @DeleteMapping("/delete/{teacherId}")
     public String deleteTeacher(@PathVariable String teacherId) {
         teacherService.deleteTeacher(Integer.valueOf(teacherId));
         return "success";
+    }
+
+    // 新增方法：根据ID或姓名进行模糊查询
+    @GetMapping("/search")
+    public Msg findTeacherByIdOrName(
+            @RequestParam(value = "searchTerm") String searchTerm,
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
+        // 获取分页结果
+        List<Teacher> teachers = teacherService.findTeacherByIdOrName(searchTerm, page, pageSize);
+        // 计算总页数
+        int totalTeachers = teacherService.countTeachersByIdOrName(searchTerm);
+        int totalPages = (int) Math.ceil((double) totalTeachers / pageSize);
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("teachers", teachers);
+        data.put("currentPage", page);
+        data.put("pageSize", pageSize);
+        data.put("totalPages", totalPages);
+
+        // 封装到 Msg 对象中
+        Msg msg = new Msg();
+        msg.setSuccess(true);
+        msg.setMessage("查询成功");
+        msg.setData(data);
+
+        return msg;
     }
 }

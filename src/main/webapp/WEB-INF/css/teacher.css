@@ -97,39 +97,29 @@ th:last-child, td:last-child {
     margin-bottom: 20px;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-input {
+.action-links .search-container input {
     padding: 8px;
-    margin-right: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px; /* 根据需要调整宽度 */
+    margin-right: 4px;
+    width: 200px; /* 修改: 增加搜索框宽度 */
 }
 
-.search-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
+.action-links .search-container button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
     cursor: pointer;
 }
 
-.search-button:hover {
-    background-color: #0056b3;
+.action-links .search-container button:hover {
+    background-color: #45a049;
 }
-
-.search-button:active {
-    background-color: #004494;
-}
-
 
 /* 弹出框样式 */
-#addTeacherModal {
+#addTeacherModal, #editTeacherModal {
     display: none;
     position: fixed;
     top: 0;
@@ -143,11 +133,11 @@ th:last-child, td:last-child {
     animation: fadeIn 0.3s ease-in-out;
 }
 
-#addTeacherModal.show {
+#addTeacherModal.show, #editTeacherModal.show {
     display: flex;
 }
 
-#addTeacherModal .modal-content {
+#addTeacherModal .modal-content, #editTeacherModal .modal-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -157,18 +147,18 @@ th:last-child, td:last-child {
     animation: slideIn 0.3s ease-in-out;
 }
 
-#addTeacherModal .modal-content h2 {
+#addTeacherModal .modal-content h2, #editTeacherModal .modal-content h2 {
     margin-bottom: 20px;
 }
 
-#addTeacherModal .modal-content label {
+#addTeacherModal .modal-content label, #editTeacherModal .modal-content label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#addTeacherModal .modal-content input,
-#addTeacherModal .modal-content select {
+#addTeacherModal .modal-content input, #addTeacherModal .modal-content select,
+#editTeacherModal .modal-content input, #editTeacherModal .modal-content select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -176,7 +166,7 @@ th:last-child, td:last-child {
     border-radius: 4px;
 }
 
-#addTeacherModal .modal-content button[type="submit"] {
+#addTeacherModal .modal-content button[type="submit"], #editTeacherModal .modal-content button[type="submit"] {
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -186,11 +176,11 @@ th:last-child, td:last-child {
     margin-right: 10px;
 }
 
-#addTeacherModal .modal-content button[type="submit"]:hover {
+#addTeacherModal .modal-content button[type="submit"]:hover, #editTeacherModal .modal-content button[type="submit"]:hover {
     background-color: #218838;
 }
 
-#addTeacherModal .modal-content button[type="button"] {
+#addTeacherModal .modal-content button[type="button"], #editTeacherModal .modal-content button[type="button"] {
     background-color: #ccc;
     color: #333;
     border: none;
@@ -199,10 +189,9 @@ th:last-child, td:last-child {
     cursor: pointer;
 }
 
-#addTeacherModal .modal-content button[type="button"]:hover {
+#addTeacherModal .modal-content button[type="button"]:hover, #editTeacherModal .modal-content button[type="button"]:hover {
     background-color: #bbb;
 }
-
 
 /* 动画效果 */
 @keyframes fadeIn {
