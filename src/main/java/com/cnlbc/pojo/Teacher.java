@@ -8,11 +8,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Teacher {
-    private Integer teacherId; // 修改为Integer
+    private Integer teacherId;
     private String name;
     private String gender;
     private String title;
-    private String fieldOfStudy; // 修改为fieldOfStudy
+    private String fieldOfStudy;
     private String contactNumber;
-    private Integer departmentId; // 修改为Integer
+    private Integer departmentId;
+    private String departmentName;
+    private String address;
+    private String classId; // 修改为 String 类型
+    private String className;
 }

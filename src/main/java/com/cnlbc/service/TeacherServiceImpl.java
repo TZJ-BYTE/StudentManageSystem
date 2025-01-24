@@ -59,4 +59,9 @@ public class TeacherServiceImpl implements TeacherService {
     public int countTeachersByIdOrName(String searchTerm) {
         return teacherRepository.countTeachersByIdOrName(searchTerm);
     }
+
+    @Override
+    public List<Teacher> findTeachersWithDepartmentAndClassesByTeacherId(Integer teacherId) {
+        return teacherRepository.findTeachersWithDepartmentAndClassesByTeacherId(teacherId);
+    }
 }

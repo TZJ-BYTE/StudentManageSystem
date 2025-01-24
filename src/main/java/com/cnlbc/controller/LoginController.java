@@ -44,6 +44,7 @@ public class LoginController {
         }
         return message;
     }
+
     //进入login页面
     @RequestMapping("/loginpage")
     public String Loginpage(Model model){

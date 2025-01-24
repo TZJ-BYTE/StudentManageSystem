@@ -15,7 +15,7 @@ $(document).ready(function() {
         if (currentPage > 1) {
             currentPage--;
             var searchTerm = $("#searchTerm").val() || ""; // 获取当前搜索词
-            loadTeachers(currentPage, pageSize, searchTerm);
+            loadTeachers(currentPage, pageSize, searchTerm); // 调用 loadTeachers 函数加载数据
         }
     });
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
         if (currentPage < totalPages) {
             currentPage++;
             var searchTerm = $("#searchTerm").val() || ""; // 获取当前搜索词
-            loadTeachers(currentPage, pageSize, searchTerm);
+            loadTeachers(currentPage, pageSize, searchTerm); // 调用 loadTeachers 函数加载数据
         }
     });
 
@@ -153,8 +153,42 @@ function confirmDelete(teacherId) {
         });
     }
 }
+function loadTeacherDetail(teacherId) {
+    $.ajax({
+        url: contextPath + "/teacher/getmore/" + teacherId,
+        type: 'GET',
+        success: function(teacher) {
+            // 填充教师详细信息到模态框中
+            var detailContent = "<p><strong>工号:</strong> " + (teacher.teacherId || '无') + "</p>" +
+                              "<p><strong>姓名:</strong> " + (teacher.name || '无') + "</p>" +
+                              "<p><strong>性别:</strong> " + (teacher.gender || '无') + "</p>" +
+                              "<p><strong>职称:</strong> " + (teacher.title || '无') + "</p>" +
+                              "<p><strong>研究领域:</strong> " + (teacher.fieldOfStudy || '无') + "</p>" +
+                              "<p><strong>联系电话:</strong> " + (teacher.contactNumber || '无') + "</p>" +
+                              "<p><strong>部门ID:</strong> " + (teacher.departmentId || '无') + "</p>" +
+                              "<p><strong>部门名称:</strong> " + (teacher.departmentName || '无') + "</p>" +
+                              "<p><strong>地址:</strong> " + (teacher.address || '无') + "</p>" +
+                              "<p><strong>班级ID:</strong> " + (teacher.classId || '无') + "</p>" +
+                              "<p><strong>班级名称:</strong> " + (teacher.className || '无') + "</p>";
+            $("#teacherDetailContent").html(detailContent);
+            // 显示详细信息模态框
+            $("#teacherDetailModal").show();
+        },
+        error: function(xhr, status, error) {
+            console.error('获取教师详细信息失败:', xhr.responseText);
+            toastr.error('获取教师详细信息失败: ' + error);
+        }
+    });
+}
+
+
+// 关闭详细信息模态框
+$("#closeDetailModal").click(function() {
+    $("#teacherDetailModal").hide();
+});
+
 function loadTeachers(page, pageSize, searchTerm) {
-    console.log("Loading teachers for page: " + page);
+    console.log("Loading teachers for page: " + page + ", pageSize: " + pageSize + ", searchTerm: " + (searchTerm || "null"));
     $.ajax({
         url: contextPath + "/teacher/search", // 修改 URL 为新的搜索接口
         type: "GET",
@@ -181,7 +215,7 @@ function loadTeachers(page, pageSize, searchTerm) {
                             "<td class=\"action-links\">" +
                             "<button class=\"btn-edit\" onclick=\"editTeacher('" + teacher.teacherId + "')\">编辑</button>" +
                             "<button class=\"btn-delete\" onclick=\"confirmDelete('" + teacher.teacherId + "')\">删除</button>" +
-                            "<button class=\"btn-detail\" onclick=\"window.location.href='" + contextPath + "/teacher/detail/" + teacher.teacherId + "'\">详情</button>" +
+                            "<button class=\"btn-detail\" onclick=\"loadTeacherDetail('" + teacher.teacherId + "')\">详情</button>" +
                             "</td>" +
                             "</tr>";
                         tbody.append(row);
@@ -193,6 +227,7 @@ function loadTeachers(page, pageSize, searchTerm) {
                 // 更新分页信息
                 $("#currentPage").text(response.data.currentPage || 1);
                 $("#totalPages").text(response.data.totalPages || 1);
+                totalPages = response.data.totalPages || 1; // 更新 totalPages 变量
             } else {
                 console.error("加载教师数据失败:", response.message);
                 toastr.error('加载教师数据失败: ' + response.message);

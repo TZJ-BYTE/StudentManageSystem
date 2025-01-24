@@ -42,13 +42,9 @@
      data-current-page="${empty param.page ? 1 : param.page}"
      data-total-pages="${empty totalPages ? 1 : totalPages}"
      data-page-size="${empty param.pageSize ? 10 : param.pageSize}">
-    <c:if test="${param.page > 1}">
-        <a href="?page=${param.page - 1}&pageSize=${param.pageSize}">上一页</a>
-    </c:if>
+    <a href="?page=${param.page - 1}&pageSize=${param.pageSize}" class="${param.page <= 1 ? 'disabled' : ''}">上一页</a>
     <span>当前页: <span id="currentPage">${empty param.page ? 1 : param.page}</span> / 总页数: <span id="totalPages">${empty totalPages ? 1 : totalPages}</span></span>
-    <c:if test="${param.page < totalPages}">
-        <a href="?page=${param.page + 1}&pageSize=${param.pageSize}">下一页</a>
-    </c:if>
+    <a href="?page=${param.page + 1}&pageSize=${param.pageSize}" class="${param.page >= totalPages ? 'disabled' : ''}">下一页</a>
 </div>
 <script>
     // 将 contextPath 传递给全局变量
@@ -111,7 +107,6 @@
             <label for="editTeacherId">工号:</label>
             <input type="text" id="editTeacherId" name="teacherId" readonly>
 
-
             <label for="editTeacherName">姓名:</label>
             <input type="text" id="editTeacherName" name="name" required><br>
 
@@ -148,3 +143,14 @@
         </form>
     </div>
 </div>
+
+<!-- 新增: 教师详细信息的模态框 -->
+<div id="teacherDetailModal" class="modal">
+    <div class="modal-content">
+        <h2>教师详细信息</h2>
+        <div id="teacherDetailContent"></div>
+        <button id="closeDetailModal" type="button">关闭</button>
+    </div>
+</div>
+</body>
+</html>

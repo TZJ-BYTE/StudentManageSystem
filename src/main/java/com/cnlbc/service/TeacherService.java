@@ -23,4 +23,6 @@ public interface TeacherService {
     public List<Teacher> findTeacherByIdOrName(@Param("searchTerm") String searchTerm, @Param("offset") int offset, @Param("pageSize") int pageSize);
 
     public int countTeachersByIdOrName(@Param("searchTerm") String searchTerm);
+
+    public List<Teacher> findTeachersWithDepartmentAndClassesByTeacherId(@Param("teacherId") Integer teacherId);
 }

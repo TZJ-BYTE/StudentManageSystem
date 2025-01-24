@@ -21,12 +21,15 @@ public class TeacherController {
     public Map<String, Object> findAllTeachers(
             @RequestParam(value = "page", defaultValue = "1") int page,
             @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
-        List<Teacher> teachers = teacherService.findAllTeacher();
+        // 计算偏移量
+        int offset = (page - 1) * pageSize;
+        // 获取分页结果
+        List<Teacher> paginatedTeachers = teacherService.findTeacherByIdOrName("", offset, pageSize);
         // 计算总页数
         int totalTeachers = teacherService.countTeachers();
         int totalPages = (int) Math.ceil((double) totalTeachers / pageSize);
         Map<String, Object> response = new HashMap<>();
-        response.put("teachers", teachers);
+        response.put("teachers", paginatedTeachers);
         response.put("currentPage", page);
         response.put("pageSize", pageSize);
         response.put("totalPages", totalPages);
@@ -37,6 +40,17 @@ public class TeacherController {
     public Teacher findTeacherById(@PathVariable int teacherId) {
         return teacherService.findTeacherById(teacherId);
     }
+
+    @GetMapping("/getmore/{teacherId}")
+    public Teacher findMoreById(@PathVariable int teacherId) {
+        List<Teacher> teachers = teacherService.findTeachersWithDepartmentAndClassesByTeacherId(teacherId);
+        if (teachers != null && !teachers.isEmpty()) {
+            return teachers.get(0); // 每个教师 ID 对应唯一记录
+        } else {
+            return null;
+        }
+    }
+
 
     @PostMapping("/add")
     public Msg addTeacher(@RequestBody Teacher teacher) {
@@ -80,12 +94,12 @@ public class TeacherController {
         return "success";
     }
 
-    // 新增方法：根据ID或姓名进行模糊查询
     @GetMapping("/search")
     public Msg findTeacherByIdOrName(
             @RequestParam(value = "searchTerm") String searchTerm,
             @RequestParam(value = "page", defaultValue = "1") int page,
             @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
+
         // 获取分页结果
         List<Teacher> teachers = teacherService.findTeacherByIdOrName(searchTerm, page, pageSize);
         // 计算总页数
@@ -107,3 +121,4 @@ public class TeacherController {
         return msg;
     }
 }
+
