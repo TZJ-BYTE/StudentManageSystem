@@ -26,16 +26,6 @@ function navigate(module) {
                         }
                     });
 
-                    // 确保 jQuery 已加载后再执行 teacher.js
-                    if (typeof $ === 'undefined') {
-                        console.error("jQuery is not loaded correctly.");
-                    } else {
-                        $(document).ready(function() {
-                            console.log("Document ready, initializing...");
-                            // 初始化 teacher.js 中的功能
-                            loadTeachers(1, 10); // 或者根据实际情况初始化
-                        });
-                    }
                 })
                 .catch(error => console.error('Error loading class.jsp:', error));
             break;
@@ -63,16 +53,6 @@ function navigate(module) {
                         }
                     });
 
-                    // 确保 jQuery 已加载后再执行 teacher.js
-                    if (typeof $ === 'undefined') {
-                        console.error("jQuery is not loaded correctly.");
-                    } else {
-                        $(document).ready(function() {
-                            console.log("Document ready, initializing...");
-                            // 初始化 teacher.js 中的功能
-                            loadTeachers(1, 10); // 或者根据实际情况初始化
-                        });
-                    }
                 })
                 .catch(error => console.error('Error loading teacher.jsp:', error));
             break;
