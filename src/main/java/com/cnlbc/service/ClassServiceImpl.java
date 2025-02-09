@@ -17,7 +17,18 @@ public class ClassServiceImpl implements ClassService {
     public List<Class> getAllClasses() {
         return classRepository.getAllClasses();
     }
-    
+
+    @Override
+    public List<Class> findClassByIdOrName(String searchTerm, int page, int pageSize) {
+        return classRepository.findClassByIdOrName(searchTerm, page, pageSize);
+    }
+
+
+    @Override
+    public int countClassesByIdOrName(String searchTerm) {
+        return classRepository.countClassesByIdOrName(searchTerm);
+    }
+
     @Override
     public Class getClassById(String id) {
         return classRepository.getClassById(id);

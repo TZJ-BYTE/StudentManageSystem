@@ -9,8 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="class初步编写">
+    <list default="true" id="d027a2ce-1732-460e-bf18-fa3afdfc0b20" name="Changes" comment="删除多余的库加载">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/controller/ClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/ClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/ClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/ClassRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/repository/ClassRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/ClassServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnlbc/service/ClassServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/class.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/class.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/class.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +246,7 @@
       <workItem from="1738563985216" duration="443000" />
       <workItem from="1738564440467" duration="6977000" />
       <workItem from="1739091516177" duration="1908000" />
-      <workItem from="1739103277224" duration="639000" />
+      <workItem from="1739103277224" duration="2642000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1735871983949</created>
@@ -350,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739103458127</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="删除多余的库加载">
+      <option name="closed" value="true" />
+      <created>1739104063808</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739104063808</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +392,7 @@
     <MESSAGE value="合并冲突" />
     <MESSAGE value="主界面整合完成" />
     <MESSAGE value="class初步编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="class初步编写" />
+    <MESSAGE value="删除多余的库加载" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除多余的库加载" />
   </component>
 </project>

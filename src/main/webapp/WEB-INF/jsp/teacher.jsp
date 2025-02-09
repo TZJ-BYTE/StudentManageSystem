@@ -52,8 +52,8 @@
 </script>
 <!-- 引入 teacher.js 文件 -->
 <script src="${pageContext.request.contextPath}/js/teacher.js"></script>
-<!-- 引入 allfuns.js 文件 -->
-<script src="${pageContext.request.contextPath}/js/allfuns.js"></script>
+<%--<!-- 引入 allfuns.js 文件 -->--%>
+<%--<script src="${pageContext.request.contextPath}/js/allfuns.js"></script>--%>
 
 <!-- 添加 -->
 <div id="addTeacherModal" class="modal">

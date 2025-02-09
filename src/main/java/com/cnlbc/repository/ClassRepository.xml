@@ -17,8 +17,8 @@
 
     <!-- 插入新班级 -->
     <insert id="saveClass" parameterType="com.cnlbc.pojo.Class">
-        INSERT INTO CLASSES (CLASSNAME, DEPARTMENTID, TEACHERID)
-        VALUES (#{className}, #{departmentId}, #{teacherId})
+        INSERT INTO CLASSES (CLASSID, CLASSNAME, DEPARTMENTID, TEACHERID)
+        VALUES (#{classId}, #{className}, #{departmentId}, #{teacherId})
     </insert>
 
     <!-- 更新班级信息 -->
@@ -34,5 +34,21 @@
     <delete id="deleteClassById" parameterType="String">
         DELETE FROM CLASSES WHERE CLASSID = #{classId}
     </delete>
+
+    <!-- 根据ID或名称查询班级 -->
+    <select id="findClassByIdOrName" parameterType="map" resultType="com.cnlbc.pojo.Class">
+        SELECT * FROM CLASSES
+        WHERE CLASSID LIKE CONCAT('%', #{searchTerm}, '%')
+           OR CLASSNAME LIKE CONCAT('%', #{searchTerm}, '%')
+        LIMIT #{page}, #{pageSize}
+    </select>
+
+    <!-- 计算根据ID或名称查询班级的总数 -->
+    <select id="countClassesByIdOrName" parameterType="String" resultType="int">
+        SELECT COUNT(*)
+        FROM CLASSES
+        WHERE CLASSID LIKE CONCAT('%', #{searchTerm}, '%')
+           OR CLASSNAME LIKE CONCAT('%', #{searchTerm}, '%')
+    </select>
 
 </mapper>
