@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cnlbc.repository.ClassRepository">
+
+    <!-- 查询所有班级 -->
+    <select id="getAllClasses" resultType="com.cnlbc.pojo.Class">
+        SELECT * FROM CLASSES
+    </select>
+
+    <!-- 根据ID查询班级 -->
+    <select id="getClassById" parameterType="String" resultType="com.cnlbc.pojo.Class">
+        SELECT * FROM CLASSES WHERE CLASSID = #{classId}
+    </select>
+
+    <!-- 插入新班级 -->
+    <insert id="saveClass" parameterType="com.cnlbc.pojo.Class">
+        INSERT INTO CLASSES (CLASSNAME, DEPARTMENTID, TEACHERID)
+        VALUES (#{className}, #{departmentId}, #{teacherId})
+    </insert>
+
+    <!-- 更新班级信息 -->
+    <update id="updateClass" parameterType="com.cnlbc.pojo.Class">
+        UPDATE CLASSES
+        SET CLASSNAME = #{className},
+            DEPARTMENTID = #{departmentId},
+            TEACHERID = #{teacherId}
+        WHERE CLASSID = #{classId}
+    </update>
+
+    <!-- 删除班级 -->
+    <delete id="deleteClassById" parameterType="String">
+        DELETE FROM CLASSES WHERE CLASSID = #{classId}
+    </delete>
+
+</mapper>

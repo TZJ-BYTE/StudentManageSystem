@@ -1,11 +1,21 @@
 package com.cnlbc.repository;
 
-import org.apache.ibatis.annotations.Param;
+import com.cnlbc.pojo.Class;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// ClassMapper.java
-public interface ClassRepository {
-
+@Repository
+public interface ClassRepository{
+        
+    List<Class> getAllClasses();
+    
+    Class getClassById(String id);
+    
+    void saveClass(Class clazz);
+    
+    void updateClass(Class clazz);
+    
+    void deleteClassById(String id);
 }
 

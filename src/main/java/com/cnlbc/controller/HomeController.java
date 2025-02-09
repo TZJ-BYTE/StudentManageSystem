@@ -48,6 +48,12 @@ public class HomeController {
     public String teachermanage(){
         return "teacher";
     }
+
+    //进入班级管理页面
+    @RequestMapping("/classmanage")
+    public String classmanage(){
+        return "class";
+    }
     //更改密码
     // 处理 GET 请求，从请求参数中获取原始密码和新密码
 

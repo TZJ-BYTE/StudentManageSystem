@@ -17,6 +17,6 @@ public class Teacher {
     private Integer departmentId;
     private String departmentName;
     private String address;
-    private String classId; // 修改为 String 类型
+    private String classId;
     private String className;
 }
