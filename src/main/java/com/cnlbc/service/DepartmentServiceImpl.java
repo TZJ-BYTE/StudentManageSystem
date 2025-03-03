@@ -1,5 +1,6 @@
 package com.cnlbc.service;
 
+import com.cnlbc.pojo.Course;
 import com.cnlbc.pojo.Department;
 import com.cnlbc.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,15 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public int countDepartments() {
         return departmentRepository.countDepartments();
+    }
+    @Override
+    public List<Department> findDepartmentByIdOrName(String searchTerm, int page, int pageSize) {
+        int offset = (page - 1) * pageSize;
+        return departmentRepository.findDepartmentByIdOrName(searchTerm, offset, pageSize);
+    }
+
+    @Override
+    public int countDepartmentsByIdOrName(String searchTerm) {
+        return departmentRepository.countDepartmentsByIdOrName(searchTerm);
     }
 }

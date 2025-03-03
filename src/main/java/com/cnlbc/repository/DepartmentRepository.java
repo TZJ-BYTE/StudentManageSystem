@@ -1,7 +1,9 @@
 package com.cnlbc.repository;
 
+import com.cnlbc.pojo.Course;
 import com.cnlbc.pojo.Department;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,4 +20,9 @@ public interface DepartmentRepository {
     public void deleteDepartment(Integer departmentId);
 
     public int countDepartments();
+    List<Department> findDepartmentByIdOrName(@Param("searchTerm") String searchTerm,
+                                      @Param("offset") int offset,
+                                      @Param("pageSize") int pageSize);
+
+    int countDepartmentsByIdOrName(@Param("searchTerm") String searchTerm);
 }

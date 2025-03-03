@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Bean;
 public class Course {
     private String courseId;
     private String courseName;
-    private String description;
-    private String departmentId;
+    private String CREDITS;
+
 
     // 生成相应的Getter、Setter方法以及构造函数（这里省略）
 
@@ -23,8 +23,8 @@ public class Course {
         return "Course{" +
                 "courseId='" + courseId + '\'' +
                 ", courseName='" + courseName + '\'' +
-                ", description='" + description + '\'' +
-                ", departmentId='" + departmentId + '\'' +
+                ", CREDITS='" + CREDITS + '\'' +
+
                 '}';
     }
 }

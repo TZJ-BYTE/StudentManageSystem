@@ -1,4 +1,4 @@
-//
+
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
@@ -47,6 +47,17 @@ public class HomeController {
     @RequestMapping("/teachermanage")
     public String teachermanage(){
         return "teacher";
+    }
+    //进入课程页面
+    @RequestMapping("/coursermanage")
+    public String coursermanage(){
+        return "course";
+    }
+
+    //进入课程页面
+    @RequestMapping("/departmanage")
+    public String departmanage(){
+        return "depart";
     }
     //更改密码
     // 处理 GET 请求，从请求参数中获取原始密码和新密码

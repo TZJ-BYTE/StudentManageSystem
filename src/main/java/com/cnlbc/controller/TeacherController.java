@@ -103,7 +103,7 @@ public class TeacherController {
         msg.setSuccess(true);
         msg.setMessage("查询成功");
         msg.setData(data);
-
+        System.out.println(msg);
         return msg;
     }
 }
