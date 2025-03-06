@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教育管理系统</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- 添加CSS文件引入 -->
-    <link rel="stylesheet" href="../css/allfuns.css"> <!-- 添加新的CSS文件引入 -->
+    <link rel="stylesheet" href="../css/allfuns.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -127,7 +127,5 @@
     const contextPath = "${pageContext.request.contextPath}";
 </script>
 <script src="../js/allfuns.js"></script>
-<%--弹出层的script--%>
-
 </body>
 </html>

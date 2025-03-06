@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Bean;
 public class Class {
     private String classId;
     private String className;
-    private String grade;
-    private String teacherId;
+    private Integer grade;
+    private Integer teacherId;
 }
-

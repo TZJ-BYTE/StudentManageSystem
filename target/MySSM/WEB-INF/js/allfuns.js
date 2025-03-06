@@ -10,7 +10,6 @@ function navigate(module) {
                 .then(response => response.text())
                 .then(data => {
                     content.innerHTML = data;
-
                     // 重新加载所有 <script> 标签
                     const scriptTags = content.getElementsByTagName('script');
                     Array.from(scriptTags).forEach(script => {
@@ -25,17 +24,16 @@ function navigate(module) {
                             eval(script.innerHTML);
                         }
                     });
-
                     // 确保 jQuery 已加载后再执行 teacher.js
-                    if (typeof $ === 'undefined') {
-                        console.error("jQuery is not loaded correctly.");
-                    } else {
-                        $(document).ready(function() {
-                            console.log("Document ready, initializing...");
-                            // 初始化 teacher.js 中的功能
-                            loadTeachers(1, 10); // 或者根据实际情况初始化
-                        });
-                    }
+                    // if (typeof $ === 'undefined') {
+                    //     console.error("jQuery is not loaded correctly.");
+                    // } else {
+                    //     $(document).ready(function() {
+                    //         console.log("Document ready, initializing...");
+                    //         // 初始化 teacher.js 中的功能
+                    //         loadTeachers(1, 10); // 或者根据实际情况初始化
+                    //     });
+                    // }
                 })
                 .catch(error => console.error('Error loading teacher.jsp:', error));
             break;
@@ -46,10 +44,56 @@ function navigate(module) {
             content.innerHTML = '<h1>班级管理</h1><p>这里是班级管理模块。</p>';
             break;
         case 'course':
-            content.innerHTML = '<h1>课程管理</h1><p>这里是课程管理模块。</p>';
+            fetch(contextPath + "/home/coursermanage")
+                .then(response => response.text())
+                .then(data => {
+                    console.log("跳转到课程页面")
+                    content.innerHTML = data;
+                    console.log("data是",data)
+                    // 重新加载所有 <script> 标签
+                    const scriptTags = content.getElementsByTagName('script');
+                    console.log("content是",content)
+                    console.log("拿到的script是",scriptTags)
+                    Array.from(scriptTags).forEach(script => {
+                        if (script.src) {
+                            // 如果有 src 属性，创建新的 <script> 标签并插入到 body 中
+                            const newScript = document.createElement('script');
+                            newScript.src = script.src;
+                            newScript.async = false; // 确保按顺序加载
+                            document.body.appendChild(newScript);
+                        } else {
+                            // 如果是内联脚本，直接执行
+                            eval(script.innerHTML);
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading course.jsp:', error));
             break;
         case 'college':
-            content.innerHTML = '<h1>学院管理</h1><p>这里是学院管理模块。</p>';
+            fetch(contextPath + "/home/departmanage")
+                .then(response => response.text())
+                .then(data => {
+                    console.log("跳转到学院页面")
+                    content.innerHTML = data;
+                    console.log("data是",data)
+                    // 重新加载所有 <script> 标签
+                    const scriptTags = content.getElementsByTagName('script');
+                    console.log("content是",content)
+                    console.log("拿到的script是",scriptTags)
+                    Array.from(scriptTags).forEach(script => {
+                        if (script.src) {
+                            // 如果有 src 属性，创建新的 <script> 标签并插入到 body 中
+                            const newScript = document.createElement('script');
+                            newScript.src = script.src;
+                            newScript.async = false; // 确保按顺序加载
+                            document.body.appendChild(newScript);
+                        } else {
+                            // 如果是内联脚本，直接执行
+                            eval(script.innerHTML);
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading depart.jsp:', error));
             break;
         //我的
         case 'profile':
@@ -58,12 +102,12 @@ function navigate(module) {
             break;
         //设置
         case 'settings':
-            location.href = "";
+            location.href = contextPath + "/user/settings"; // 修改: 设置正确的 URL 路径
             break;
         //退出
         case 'logout':
             // 在这里执行退出登录逻辑，例如重定向到登录页面
-            location.href = contextPath + "/user/loginpage";
+            location.href = contextPath + "/user/logout";
             // 实际应用中可能是：
             // window.location.href = 'login.html';
             break;
@@ -115,31 +159,24 @@ document.getElementById('editNickname').addEventListener('click', function () {
     confirmBtn.addEventListener('click', function () {
         displayDiv.innerText = input.value; // 更新显示的昵称
         // 发送GET请求到/user/updateusername
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', contextPath+'/user/updateusername?newValue=' + encodeURIComponent(input.value), true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) { // 检查请求是否完成
-                try {
-                    var response = JSON.parse(xhr.responseText); // 尝试解析响应文本为JSON
-                    if (response === true) {
-                        // 响应是布尔值true，表示更新成功
-                        console.log('Nickname updated successfully');
-                        alert("修改昵称成功");
-                    } else {
-                        // 响应是布尔值false，表示更新失败
-                        alert("修改昵称失败请重试");
-                    }
-                } catch (e) {
-                    // 响应不是有效的JSON，可能是服务器返回了错误信息
-                    alert("服务器错误：" + xhr.responseText);
+
+        // 使用 jQuery 的 $.ajax 方法
+        $.ajax({
+            url: contextPath + '/home/updateusername',
+            type: 'GET',
+            data: { newValue: encodeURIComponent(input.value) },
+            success: function (response) {
+                if (response === true) {
+                    console.log('Nickname updated successfully');
+                    alert("修改昵称成功");
+                } else {
+                    alert("修改昵称失败请重试");
                 }
+            },
+            error: function (xhr, status, error) {
+                alert("服务器错误：" + xhr.responseText);
             }
-        };
-        xhr.onerror = function () {
-            // 请求过程中发生错误
-            alert("请求出错，请检查网络连接或联系管理员");
-        };
-        xhr.send();
+        });
     });
     // 移除原有blur事件监听器，因为我们希望在点击确认按钮后才隐藏输入框
     input.removeEventListener('blur', arguments.callee);
@@ -155,17 +192,25 @@ function checkAndUpdatePassword() {
         return;
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', contextPath+'/user/updatepasswd?originalPassword=' + encodeURIComponent(originalPassword) + '&newPassword=' + encodeURIComponent(newPassword), true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            var response = JSON.parse(xhr.responseText); // 解析响应文本为JSON对象
-            if (xhr.status === 200 && response) {
+    // 发送GET请求到/user/updatepasswd
+
+    // 使用 jQuery 的 $.ajax 方法
+    $.ajax({
+        url: contextPath + '/home/updatepasswd',
+        type: 'GET',
+        data: {
+            originalPassword: encodeURIComponent(originalPassword),
+            newPassword: encodeURIComponent(newPassword)
+        },
+        success: function (response) {
+            if (response) {
                 alert('密码更新成功！');
             } else {
-                alert('密码更新失败：' + (xhr.statusText || 'Unknown error'));
+                alert('密码更新失败：' + (xhr.statusText || '未知错误'));
             }
+        },
+        error: function (xhr, status, error) {
+            alert("服务器错误：" + xhr.responseText);
         }
-    };
-    xhr.send();
+    });
 }

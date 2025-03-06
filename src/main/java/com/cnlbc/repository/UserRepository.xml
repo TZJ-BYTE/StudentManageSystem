@@ -10,12 +10,12 @@
     <update id="updateUserName">
         update users
         set username = #{newvalue}
-        where username = #{oldname}
+        where usertid = #{usertid}
     </update>
     <update id="updatePassword">
         UPDATE users
         SET password = #{password}
-        WHERE username = #{username}
+        WHERE usertid = #{usertid}
     </update>
     <select id="findByPasswd" resultType="User">
         SELECT *
@@ -28,4 +28,12 @@
         VALUES (#{username}, #{password})
     </insert>
 
+    <insert id="registerUser" parameterType="User">
+        insert into users(usertid, username, password)
+        values(#{usertid}, #{username}, #{password})
+    </insert>
+
+    <select id="getMaxUsertId" resultType="int">
+        SELECT MAX(usertid) FROM users
+    </select>
 </mapper>

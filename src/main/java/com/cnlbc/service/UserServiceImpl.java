@@ -24,12 +24,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public  void updateUserName(String oldname, String newvalue) {
-        userRepository.updateUserName(oldname, newvalue);
+    public void registerUser(User user) {
+        userRepository.registerUser(user);
+    }
+
+    @Override
+    public Integer getMaxUsertId() {
+        return userRepository.getMaxUsertId();
+    }
+
+    @Override
+    public  void updateUserName(int usertid, String newvalue) {
+        userRepository.updateUserName(usertid, newvalue);
     }
     @Override
-    public void updatePassword(String username,String password){
-        userRepository.updatePassword(username,password);
+    public void updatePassword(int usertid,String password){
+        userRepository.updatePassword(usertid,password);
     }
     @Override
     public List<User>  findByPasswd (String username,String password){

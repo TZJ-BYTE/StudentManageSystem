@@ -19,7 +19,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher findTeacherById(String teacherId) {
+    public Teacher findTeacherById(Integer teacherId) {
         return teacherRepository.findTeacherById(teacherId);
     }
 
@@ -34,12 +34,29 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public void deleteTeacher(String teacherId) {
+    public Integer deleteTeacher(Integer teacherId) {
         teacherRepository.deleteTeacher(teacherId);
+        return teacherId;
     }
 
     @Override
     public int countTeachers() {
         return teacherRepository.countTeachers();
+    }
+
+    @Override
+    public Integer getMaxTeacherId() {
+        return teacherRepository.getMaxTeacherId();
+    }
+
+    @Override
+    public List<Teacher> findTeacherByIdOrName(String searchTerm, int page, int pageSize) {
+        int offset = (page - 1) * pageSize;
+        return teacherRepository.findTeacherByIdOrName(searchTerm, offset, pageSize);
+    }
+
+    @Override
+    public int countTeachersByIdOrName(String searchTerm) {
+        return teacherRepository.countTeachersByIdOrName(searchTerm);
     }
 }

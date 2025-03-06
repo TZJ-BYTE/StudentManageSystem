@@ -25,5 +25,15 @@
     <delete id="deleteCourse">
         DELETE FROM courses WHERE course_id = #{courseId}
     </delete>
+    <select id="findCourseByIdOrName" resultType="Course">
+        SELECT * FROM courses
+        WHERE courseid LIKE CONCAT('%', #{searchTerm}, '%')
+            LIMIT #{pageSize, jdbcType=INTEGER} OFFSET #{offset, jdbcType=INTEGER}
+    </select>
+
+    <select id="countCourseByIdOrName" resultType="int">
+        SELECT COUNT(*) FROM courses
+        WHERE courseid LIKE CONCAT('%', #{searchTerm}, '%')
+    </select>
 
 </mapper>

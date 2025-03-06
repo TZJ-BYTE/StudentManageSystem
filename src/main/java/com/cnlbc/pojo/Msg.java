@@ -3,15 +3,22 @@ package com.cnlbc.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Bean;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
-/*等同于各个字段的get()和set()方法*/
 @NoArgsConstructor
-/*等同于无参构造*/
 @AllArgsConstructor
-/*等同于全参构造*/
 public class Msg {
-    public Boolean success;
-    public String Message;
+    private Boolean success;
+    private String message;
+    private Map<String, Object> data;
+
+    // 添加一个构造函数来初始化默认值
+    public Msg(Boolean success, String message) {
+        this.success = success;
+        this.message = message;
+        this.data = new HashMap<>();
+    }
 }
