@@ -10,6 +10,7 @@ function navigate(module) {
                 .then(response => response.text())
                 .then(data => {
                     content.innerHTML = data;
+
                     // 重新加载所有 <script> 标签
                     const scriptTags = content.getElementsByTagName('script');
                     Array.from(scriptTags).forEach(script => {
@@ -41,7 +42,28 @@ function navigate(module) {
             content.innerHTML = '<h1>学生管理</h1><p>这里是学生管理模块。</p>';
             break;
         case 'class':
-            content.innerHTML = '<h1>班级管理</h1><p>这里是班级管理模块。</p>';
+            fetch(contextPath + "/home/classmanage")
+                .then(response => response.text())
+                .then(data => {
+                    content.innerHTML = data;
+
+                    // 重新加载所有 <script> 标签
+                    const scriptTags = content.getElementsByTagName('script');
+                    Array.from(scriptTags).forEach(script => {
+                        if (script.src) {
+                            // 如果有 src 属性，创建新的 <script> 标签并插入到 body 中
+                            const newScript = document.createElement('script');
+                            newScript.src = script.src;
+                            newScript.async = false; // 确保按顺序加载
+                            document.body.appendChild(newScript);
+                        } else {
+                            // 如果是内联脚本，直接执行
+                            eval(script.innerHTML);
+                        }
+                    });
+
+                })
+                .catch(error => console.error('Error loading teacher.jsp:', error));
             break;
         case 'course':
             fetch(contextPath + "/home/coursermanage")
