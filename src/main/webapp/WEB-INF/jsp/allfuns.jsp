@@ -126,7 +126,6 @@
 <script>
     const contextPath = "${pageContext.request.contextPath}";
 </script>
-<script src="../js/teacher.js"></script>
 <script src="../js/allfuns.js"></script>
 </body>
 </html>
