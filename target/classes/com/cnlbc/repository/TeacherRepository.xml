@@ -33,16 +33,42 @@
         SELECT MAX(teacherid) FROM teachers
     </select>
 
-    <select id="findTeacherByIdOrName" resultType="Teacher">
-    SELECT * FROM teachers
-    WHERE teacherid LIKE CONCAT('%', #{searchTerm}, '%')
-       OR name LIKE CONCAT('%', #{searchTerm}, '%')
-</select>
+     <select id="findTeacherByIdOrName" resultType="Teacher">
+         SELECT * FROM teachers
+         WHERE teacherid LIKE CONCAT('%', #{searchTerm}, '%')
+            OR name LIKE CONCAT('%', #{searchTerm}, '%')
+         LIMIT #{pageSize} OFFSET #{offset}
+     </select>
+
     <!-- 新增统计模糊查询结果总数 -->
     <select id="countTeachersByIdOrName" resultType="int">
         SELECT COUNT(*) FROM teachers
         WHERE teacherid LIKE CONCAT('%', #{searchTerm}, '%')
            OR name LIKE CONCAT('%', #{searchTerm}, '%')
     </select>
+
+    <select id="findTeachersWithDepartmentAndClassesByTeacherId" resultType="Teacher" parameterType="int">
+        SELECT
+            T.TEACHERID,
+            T.NAME,
+            T.GENDER,
+            T.TITLE,
+            T.FIELDOFSTUDY,
+            T.CONTACTNUMBER,
+            T.DEPARTMENTID,
+            D.DEPARTMENTNAME,
+            D.ADDRESS,
+            C.CLASSID,
+            C.CLASSNAME
+        FROM
+            "SYSDBA"."TEACHERS" T
+                LEFT JOIN
+            "SYSDBA"."DEPARTMENTS" D ON T.DEPARTMENTID = D.DEPARTMENTID
+                LEFT JOIN
+            "SYSDBA"."CLASSES" C ON T.TEACHERID = C.TEACHERID
+        WHERE
+            T.TEACHERID =  #{teacherId};
+    </select>
+
 
 </mapper>
