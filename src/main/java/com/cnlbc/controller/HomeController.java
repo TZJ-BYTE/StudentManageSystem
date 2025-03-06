@@ -48,6 +48,17 @@ public class HomeController {
     public String teachermanage(){
         return "teacher";
     }
+    //进入课程页面
+    @RequestMapping("/coursermanage")
+    public String coursermanage(){
+        return "course";
+    }
+
+    //进入课程页面
+    @RequestMapping("/departmanage")
+    public String departmanage(){
+        return "depart";
+    }
 
     //进入班级管理页面
     @RequestMapping("/classmanage")
